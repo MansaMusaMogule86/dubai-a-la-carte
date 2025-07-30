@@ -11,8 +11,8 @@ const VIP = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation user={user} onLogout={signOut} />
-      <div className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <div className="pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               VIP Lounge Access Dubai – <span className="text-gold">Exclusive Events & Premium Venues 2025</span>
