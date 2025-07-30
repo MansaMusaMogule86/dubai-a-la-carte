@@ -97,14 +97,23 @@ export default function Auth() {
     <div className="min-h-screen bg-gradient-to-br from-background to-muted flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Back to home */}
-        <Button
-          variant="ghost"
-          onClick={() => navigate("/")}
-          className="mb-6 flex items-center space-x-2"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Home</span>
-        </Button>
+          <div className="flex items-center justify-between mb-6">
+            <Button
+              variant="ghost"
+              onClick={() => navigate("/")}
+              className="flex items-center space-x-2"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Home</span>
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => navigate("/chat")}
+              className="flex items-center space-x-2"
+            >
+              <span>Need Help?</span>
+            </Button>
+          </div>
 
         <Card className="shadow-luxury">
           <CardHeader className="text-center">
@@ -163,6 +172,16 @@ export default function Auth() {
                   >
                     {loading ? "Signing in..." : "Sign In"}
                   </Button>
+                  <div className="flex justify-center space-x-4 mt-4">
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => alert("Password reset functionality coming soon")}
+                    >
+                      Forgot Password?
+                    </Button>
+                  </div>
                 </form>
               </TabsContent>
 

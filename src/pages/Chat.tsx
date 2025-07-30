@@ -47,9 +47,22 @@ const Chat = () => {
               <p className="text-muted-foreground mb-6">
                 Our AI concierge is ready to assist you with any request, from restaurant reservations to travel planning.
               </p>
-              <Button variant="premium" size="lg">
-                Begin Chat Session
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  variant="premium" 
+                  size="lg"
+                  onClick={() => alert("AI Chat system will be available soon")}
+                >
+                  Begin AI Chat
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => alert("Human expert connection coming soon")}
+                >
+                  Connect with Expert
+                </Button>
+              </div>
             </div>
           </Card>
         </div>

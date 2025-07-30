@@ -124,10 +124,18 @@ export default function Dashboard() {
               <p className="text-muted-foreground">Welcome back, {user.email}</p>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => alert("Notifications feature coming soon")}
+              >
                 <Bell className="w-4 h-4" />
               </Button>
-              <Button variant="ghost" size="sm">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => navigate("/profile")}
+              >
                 <Settings className="w-4 h-4" />
               </Button>
               <Button 
@@ -136,6 +144,13 @@ export default function Dashboard() {
                 onClick={() => navigate("/")}
               >
                 Back to Home
+              </Button>
+              <Button 
+                variant="premium" 
+                size="sm"
+                onClick={() => navigate("/chat")}
+              >
+                Quick Chat
               </Button>
             </div>
           </div>
@@ -234,7 +249,11 @@ export default function Dashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button className="w-full" variant="premium">
+              <Button 
+                className="w-full" 
+                variant="premium"
+                onClick={() => navigate("/chat")}
+              >
                 Start Conversation
               </Button>
             </CardContent>
@@ -251,7 +270,11 @@ export default function Dashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button className="w-full" variant="elegant">
+              <Button 
+                className="w-full" 
+                variant="elegant"
+                onClick={() => navigate("/profile")}
+              >
                 Edit Profile
               </Button>
             </CardContent>

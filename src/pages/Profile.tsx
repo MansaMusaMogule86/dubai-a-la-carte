@@ -30,7 +30,13 @@ const Profile = () => {
               <div className="space-y-3 text-muted-foreground">
                 <p>Update your contact details, preferences, and emergency contacts</p>
               </div>
-              <Button variant="outline" className="mt-4">Edit Profile</Button>
+              <Button 
+                variant="outline" 
+                className="mt-4"
+                onClick={() => alert("Profile editing functionality coming soon")}
+              >
+                Edit Profile
+              </Button>
             </Card>
 
             <Card className="p-6">
@@ -41,7 +47,13 @@ const Profile = () => {
               <div className="space-y-3 text-muted-foreground">
                 <p>Upload and manage passports, visas, and identification documents</p>
               </div>
-              <Button variant="outline" className="mt-4">Manage Documents</Button>
+              <Button 
+                variant="outline" 
+                className="mt-4"
+                onClick={() => alert("Document management system coming soon")}
+              >
+                Manage Documents
+              </Button>
             </Card>
 
             <Card className="p-6">
@@ -52,7 +64,13 @@ const Profile = () => {
               <div className="space-y-3 text-muted-foreground">
                 <p>View payment history, invoices, and manage billing methods</p>
               </div>
-              <Button variant="outline" className="mt-4">View Billing</Button>
+              <Button 
+                variant="outline" 
+                className="mt-4"
+                onClick={() => alert("Billing portal coming soon")}
+              >
+                View Billing
+              </Button>
             </Card>
 
             <Card className="p-6">
@@ -63,7 +81,13 @@ const Profile = () => {
               <div className="space-y-3 text-muted-foreground">
                 <p>Privacy settings, notifications, and security preferences</p>
               </div>
-              <Button variant="outline" className="mt-4">Manage Settings</Button>
+              <Button 
+                variant="outline" 
+                className="mt-4"
+                onClick={() => alert("Settings panel coming soon")}
+              >
+                Manage Settings
+              </Button>
             </Card>
           </div>
 
@@ -73,8 +97,18 @@ const Profile = () => {
               Our dedicated account managers are available to help you with any questions or special requests.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="premium">Contact Account Manager</Button>
-              <Button variant="outline">Live Chat Support</Button>
+              <Button 
+                variant="premium"
+                onClick={() => alert("Account manager contact system coming soon")}
+              >
+                Contact Account Manager
+              </Button>
+              <Button 
+                variant="outline"
+                onClick={() => window.location.href = "/chat"}
+              >
+                Live Chat Support
+              </Button>
             </div>
           </Card>
         </div>

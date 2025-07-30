@@ -247,11 +247,29 @@ const Business = () => {
                 Get started with a free consultation today.
               </p>
               <div className="space-y-4">
-                <Button variant="premium" size="lg" className="w-full">
+                <Button 
+                  variant="premium" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={() => alert("Consultation booking system coming soon")}
+                >
                   Schedule Free Consultation
                 </Button>
-                <Button variant="outline" size="lg" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={() => alert("Setup guide download coming soon")}
+                >
                   Download Setup Guide
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={() => window.location.href = "/chat"}
+                >
+                  Ask Business Questions
                 </Button>
               </div>
               <div className="mt-6 text-center">

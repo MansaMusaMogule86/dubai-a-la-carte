@@ -308,12 +308,27 @@ const RealEstate = () => {
               Get personalized recommendations and exclusive access to off-market listings.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="premium" size="lg">
+              <Button 
+                variant="premium" 
+                size="lg"
+                onClick={() => alert("Property consultation booking coming soon")}
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Consultation
               </Button>
-              <Button variant="elegant" size="lg">
+              <Button 
+                variant="elegant" 
+                size="lg"
+                onClick={() => alert("Property catalog coming soon")}
+              >
                 Browse All Properties
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => window.location.href = "/chat"}
+              >
+                Property Concierge
               </Button>
             </div>
             <div className="mt-6">

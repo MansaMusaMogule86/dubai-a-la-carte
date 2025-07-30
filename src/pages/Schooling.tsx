@@ -342,12 +342,30 @@ const Schooling = () => {
                 admission to the perfect institution for your child's success.
               </p>
               <div className="space-y-4">
-                <Button variant="premium" size="lg" className="w-full">
+                <Button 
+                  variant="premium" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={() => alert("Education consultation booking coming soon")}
+                >
                   <Calendar className="w-5 h-5 mr-2" />
                   Book Free Consultation
                 </Button>
-                <Button variant="outline" size="lg" className="w-full">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={() => alert("School guide download coming soon")}
+                >
                   Download School Guide
+                </Button>
+                <Button 
+                  variant="ghost" 
+                  size="lg" 
+                  className="w-full"
+                  onClick={() => window.location.href = "/chat"}
+                >
+                  Education Advisor
                 </Button>
               </div>
               <div className="mt-6 text-center">

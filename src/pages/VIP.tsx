@@ -41,49 +41,91 @@ const VIP = () => {
                     <TableCell className="font-medium">🎤 Private Events</TableCell>
                     <TableCell>Invitation-only galas, brand launches & after-parties at Atlantis Royal, One&Only Royal Mirage, floating Dubai Canal lounges</TableCell>
                     <TableCell className="text-center">
-                      <Button variant="gold" size="sm">Request Invite</Button>
+                      <Button 
+                        variant="gold" 
+                        size="sm"
+                        onClick={() => alert("Private event invitation system coming soon")}
+                      >
+                        Request Invite
+                      </Button>
                     </TableCell>
                   </TableRow>
                   <TableRow className="border-gold/10">
                     <TableCell className="font-medium">🍾 Premium Venues</TableCell>
                     <TableCell>Skip-the-line tables at CÉ LA VI, BOA, Cavalli Club, WHITE Dubai & hidden speakeasy Gold on 27 (Burj Al Arab)</TableCell>
                     <TableCell className="text-center">
-                      <Button variant="gold" size="sm">Reserve Table</Button>
+                      <Button 
+                        variant="gold" 
+                        size="sm"
+                        onClick={() => alert("Table reservation system coming soon")}
+                      >
+                        Reserve Table
+                      </Button>
                     </TableCell>
                   </TableRow>
                   <TableRow className="border-gold/10">
                     <TableCell className="font-medium">🎪 Exclusive Galas</TableCell>
                     <TableCell>Red-carpet nights during Dubai World Cup, Art Dubai, GITEX, Diwali @ Bollywood Parks</TableCell>
                     <TableCell className="text-center">
-                      <Button variant="gold" size="sm">Lock My Spot</Button>
+                      <Button 
+                        variant="gold" 
+                        size="sm"
+                        onClick={() => alert("Exclusive gala reservation coming soon")}
+                      >
+                        Lock My Spot
+                      </Button>
                     </TableCell>
                   </TableRow>
                   <TableRow className="border-gold/10">
                     <TableCell className="font-medium">🚪 Elite Clubs</TableCell>
                     <TableCell>Lifetime-style access to Armani/Privé, SKY 2.0, Cirque Le Soir, SĀN Beach, DRIFT</TableCell>
                     <TableCell className="text-center">
-                      <Button variant="gold" size="sm">Activate Pass</Button>
+                      <Button 
+                        variant="gold" 
+                        size="sm"
+                        onClick={() => alert("Elite club pass activation coming soon")}
+                      >
+                        Activate Pass
+                      </Button>
                     </TableCell>
                   </TableRow>
                   <TableRow className="border-gold/10">
                     <TableCell className="font-medium">📅 Live Event Calendar</TableCell>
                     <TableCell>Real-time VIP-only calendar, 1-tap RSVP & wait-list sync to Apple/Google</TableCell>
                     <TableCell className="text-center">
-                      <Button variant="gold" size="sm">View Calendar</Button>
+                      <Button 
+                        variant="gold" 
+                        size="sm"
+                        onClick={() => alert("Live event calendar coming soon")}
+                      >
+                        View Calendar
+                      </Button>
                     </TableCell>
                   </TableRow>
                   <TableRow className="border-gold/10">
                     <TableCell className="font-medium">🎁 Curated Luxury</TableCell>
                     <TableCell>Personal hostess, limo transfers, complimentary champagne, backstage meet-and-greets</TableCell>
                     <TableCell className="text-center">
-                      <Button variant="gold" size="sm">Upgrade My Night</Button>
+                      <Button 
+                        variant="gold" 
+                        size="sm"
+                        onClick={() => alert("Luxury upgrade system coming soon")}
+                      >
+                        Upgrade My Night
+                      </Button>
                     </TableCell>
                   </TableRow>
                   <TableRow className="border-gold/10">
                     <TableCell className="font-medium">⚡ Priority Perks</TableCell>
                     <TableCell>Skip queues, best-table guarantee, chef's tasting menu, discrete billing</TableCell>
                     <TableCell className="text-center">
-                      <Button variant="gold" size="sm">Book Priority</Button>
+                      <Button 
+                        variant="gold" 
+                        size="sm"
+                        onClick={() => alert("Priority booking system coming soon")}
+                      >
+                        Book Priority
+                      </Button>
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -128,11 +170,20 @@ const VIP = () => {
               Join Dubai's most exclusive circle and gain access to the city's most prestigious venues and events.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="premium" size="lg">
+              <Button 
+                variant="premium" 
+                size="lg"
+                onClick={() => alert("VIP membership enrollment coming soon")}
+              >
                 <Crown className="w-5 h-5 mr-2" />
                 Become VIP Member
               </Button>
-              <Button variant="outline" size="lg" className="border-gold/30 text-gold hover:bg-gold/10">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-gold/30 text-gold hover:bg-gold/10"
+                onClick={() => alert("VIP event calendar coming soon")}
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 View Event Calendar
               </Button>
