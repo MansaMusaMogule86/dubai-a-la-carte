@@ -88,7 +88,7 @@ const VIP = () => {
                 </li>
                 <li className="flex items-center">
                   <Crown className="w-5 h-5 text-gold mr-3" />
-                  <span>Secure your VIP Lounge Access in Dubai 2025—exclusive tables, private events, and premium nightlife with instant booking and red-carpet treatment.</span>
+                  <span>Express entry and VIP treatment</span>
                 </li>
                 <li className="flex items-center">
                   <Crown className="w-5 h-5 text-gold mr-3" />
