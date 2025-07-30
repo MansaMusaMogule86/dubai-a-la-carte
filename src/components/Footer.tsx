@@ -76,26 +76,30 @@ export const Footer = () => {
               <li><a href="#" className="text-white/80 hover:text-gold transition-colors">Privacy</a></li>
               <li><a href="#" className="text-white/80 hover:text-gold transition-colors">Terms</a></li>
             </ul>
+            
+            {/* Social Media */}
+            <div className="mt-6">
+              <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+              <div className="flex items-center space-x-4">
+                <a href="#" className="text-white/60 hover:text-gold transition-colors">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-white/60 hover:text-gold transition-colors">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-white/60 hover:text-gold transition-colors">
+                  <Twitter className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Social & Copyright */}
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 mb-4 md:mb-0">
+        {/* Copyright */}
+        <div className="border-t border-white/10 mt-12 pt-8 text-center">
+          <p className="text-white/60">
             © 2024 Dubai À La Carte. All rights reserved.
           </p>
-          
-          <div className="flex items-center space-x-4">
-            <a href="#" className="text-white/60 hover:text-gold transition-colors">
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-white/60 hover:text-gold transition-colors">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-white/60 hover:text-gold transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>;
