@@ -26,9 +26,9 @@ export const Footer = () => {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">{/* Changed from md:grid-cols-2 lg:grid-cols-4 to lg:grid-cols-3 for 3 equal sections */}
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div>{/* Removed lg:col-span-2 to make it equal width */}
             <h3 className="text-2xl font-bold mb-4">Dubai À La Carte</h3>
             <p className="text-white/80 mb-6 max-w-md">
               Your premier luxury concierge service in Dubai. We transform the way 
