@@ -1,16 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Instagram, 
-  Linkedin, 
-  Twitter 
-} from "lucide-react";
-
+import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
 export const Footer = () => {
-  return (
-    <footer className="bg-primary text-white">
+  return <footer className="bg-primary text-white">
       {/* CTA Section */}
       <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -22,10 +13,10 @@ export const Footer = () => {
               Join the exclusive circle of individuals who trust us with their Dubai lifestyle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="premium" size="xl">
+              <Button variant="premium" size="xl" className="text-base">
                 Start Your Journey
               </Button>
-              <Button variant="outline" size="xl" className="text-white border-white/30 hover:bg-white/10">
+              <Button variant="outline" size="xl" className="border-white/30 hover:bg-white/10 text-amber-400">
                 Book Consultation
               </Button>
             </div>
@@ -107,6 +98,5 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
