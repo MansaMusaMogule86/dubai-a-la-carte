@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { useAuth } from "@/hooks/useAuth";
+import { ServiceChatbot } from "@/components/ServiceChatbot";
 import { GraduationCap, BookOpen, Users, Award, Star, CheckCircle, Globe, Target, Calendar, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -377,6 +378,16 @@ const Schooling = () => {
           </div>
         </div>
       </div>
+
+      {/* Education Assistant */}
+      <ServiceChatbot
+        serviceName="Education"
+        botName="Victoria"
+        botColor="#8B5CF6"
+        systemPrompt="You are Victoria, an education consultant specializing in Dubai's premium educational institutions and international schools. You have comprehensive knowledge of curriculum options (British, American, IB, French, etc.), admission procedures, school fees, extracurricular programs, and educational support services. You provide expert guidance on school selection, application processes, educational assessments, and academic pathways. You speak with warmth and professionalism, offering personalized advice for families seeking the best educational opportunities for their children in Dubai."
+        welcomeMessage="Hello! I'm Victoria, your education consultant for Dubai's premium schools and educational institutions. I'm here to help you find the perfect educational path for your children. How can I assist you with your schooling needs today?"
+        position="left"
+      />
     </div>
   );
 };

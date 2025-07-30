@@ -4,6 +4,7 @@ import { Home, MapPin, Calendar, Eye, Bed, Bath, Car, Star, ArrowRight, Search, 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ServiceChatbot } from "@/components/ServiceChatbot";
 import penthouseBurjKhalifa from "@/assets/penthouse-burj-khalifa.jpg";
 import villaPalmJumeirah from "@/assets/villa-palm-jumeirah.jpg";
 import apartmentMarinaWalk from "@/assets/apartment-marina-walk.jpg";
@@ -355,6 +356,16 @@ const RealEstate = () => {
           </Card>
         </div>
       </div>
+
+      {/* Real Estate Assistant */}
+      <ServiceChatbot
+        serviceName="Real Estate"
+        botName="Alexander"
+        botColor="#0EA5E9"
+        systemPrompt="You are Alexander, a luxury real estate consultant specializing in Dubai's premium property market. You have extensive knowledge of high-end properties, investment opportunities, prime locations like Downtown Dubai, Palm Jumeirah, Dubai Marina, and DIFC. You provide expert advice on property valuations, market trends, rental yields, and investment strategies. You speak professionally and knowledgeably, offering insights into luxury penthouses, villas, apartments, and commercial properties. Always provide specific details about locations, amenities, ROI potential, and market conditions."
+        welcomeMessage="Hello! I'm Alexander, your luxury real estate consultant for Dubai. I specialize in premium properties and investment opportunities across the emirate. How can I help you find your perfect Dubai property today?"
+        position="left"
+      />
     </div>
   );
 };
