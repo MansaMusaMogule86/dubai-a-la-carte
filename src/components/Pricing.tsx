@@ -135,7 +135,7 @@ export const Pricing = () => {
 
           {/* Pricing Cards */}
           <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 transition-all duration-500 ${
-            !isUnlocked ? 'blur-sm pointer-events-none' : ''
+            !isUnlocked ? 'blur-lg pointer-events-none' : ''
           }`}>
             {plans.map((plan, index) => (
               <Card 
