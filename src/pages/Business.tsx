@@ -18,11 +18,116 @@ const Business = () => {
       popular: false
     },
     {
-      title: "Dubai Free Zone",
-      description: "Tax-free environment with 100% foreign ownership",
-      features: ["0% corporate tax", "0% import/export duties", "100% profit repatriation", "Streamlined setup"],
-      price: "From AED 8,000",
+      title: "DIFC (Dubai International Financial Centre)",
+      description: "Premium financial services hub with international law framework",
+      features: ["Common law jurisdiction", "International regulatory standards", "Banking & finance focus", "DIFC Courts system"],
+      price: "From AED 45,000",
       popular: true
+    },
+    {
+      title: "DMCC (Dubai Multi Commodities Centre)",
+      description: "World's largest free zone for commodities trade",
+      features: ["Commodities trading focus", "Gold & precious metals", "Strategic location", "World-class facilities"],
+      price: "From AED 18,000",
+      popular: false
+    },
+    {
+      title: "JAFZA (Jebel Ali Free Zone)",
+      description: "Middle East's largest free zone with port connectivity",
+      features: ["Port connectivity", "Manufacturing focus", "Logistics hub", "Established infrastructure"],
+      price: "From AED 12,000",
+      popular: false
+    },
+    {
+      title: "Dubai Airport Free Zone (DAFZ)",
+      description: "Aviation-focused free zone with airport connectivity",
+      features: ["Airport proximity", "Aviation services", "Cargo facilities", "Quick setup"],
+      price: "From AED 14,000",
+      popular: false
+    },
+    {
+      title: "Dubai Internet City",
+      description: "Technology and innovation hub for IT companies",
+      features: ["Tech industry focus", "Innovation ecosystem", "Networking opportunities", "Modern facilities"],
+      price: "From AED 20,000",
+      popular: false
+    },
+    {
+      title: "Dubai Media City",
+      description: "Media and creative industries hub",
+      features: ["Media & advertising", "Creative industries", "Broadcasting facilities", "Content creation"],
+      price: "From AED 16,000",
+      popular: false
+    },
+    {
+      title: "Dubai Healthcare City",
+      description: "Medical and healthcare services free zone",
+      features: ["Healthcare focus", "Medical facilities", "Research capabilities", "Regulatory framework"],
+      price: "From AED 25,000",
+      popular: false
+    },
+    {
+      title: "Meydan Free Zone",
+      description: "Business and leisure destination with racing heritage",
+      features: ["Business & leisure", "Racing industry", "Event management", "Hospitality services"],
+      price: "From AED 13,500",
+      popular: false
+    },
+    {
+      title: "Sharjah Publishing City",
+      description: "Publishing and media free zone in Sharjah",
+      features: ["Publishing industry", "Media services", "Cultural focus", "Cost-effective setup"],
+      price: "From AED 8,500",
+      popular: false
+    },
+    {
+      title: "Ajman Free Zone",
+      description: "Affordable business setup with comprehensive services",
+      features: ["Cost-effective", "Quick setup", "Various business activities", "Flexible packages"],
+      price: "From AED 7,000",
+      popular: false
+    },
+    {
+      title: "Fujairah Free Zone",
+      description: "Strategic location for East Coast operations",
+      features: ["East Coast access", "Port facilities", "Industrial focus", "Competitive rates"],
+      price: "From AED 9,000",
+      popular: false
+    },
+    {
+      title: "Ras Al Khaimah Economic Zone (RAKEZ)",
+      description: "Northern Emirates business hub with diverse sectors",
+      features: ["Manufacturing focus", "Lower operational costs", "Various sectors", "Government support"],
+      price: "From AED 6,500",
+      popular: false
+    },
+    {
+      title: "Umm Al Quwain Free Trade Zone",
+      description: "Smallest emirate with big business opportunities",
+      features: ["Lowest costs", "Quick processing", "Flexible regulations", "Strategic location"],
+      price: "From AED 5,500",
+      popular: false
+    },
+    {
+      title: "Abu Dhabi Global Market (ADGM)",
+      description: "Capital's financial free zone with English common law",
+      features: ["Financial services hub", "English common law", "Capital city location", "Regulatory excellence"],
+      price: "From AED 40,000",
+      popular: false
+    },
+    {
+      title: "Masdar City Free Zone",
+      description: "Sustainable city focused on clean technology",
+      features: ["Clean technology", "Sustainability focus", "Innovation hub", "Green building standards"],
+      price: "From AED 22,000",
+      popular: false
+    },
+    {
+      title: "Dubai South Free Zone",
+      description: "Next-generation city with Al Maktoum Airport",
+      features: ["Airport connectivity", "Logistics hub", "Aviation focus", "Future city development"],
+      price: "From AED 11,000",
+      popular: false
     },
     {
       title: "Dubai Offshore",
