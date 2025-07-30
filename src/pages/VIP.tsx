@@ -12,6 +12,15 @@ import venueVerdeBeach from "@/assets/venue-verde-beach.jpg";
 import venueChicNonna from "@/assets/venue-chic-nonna.jpg";
 import venueGattopardo from "@/assets/venue-gattopardo.jpg";
 import venueSurfClub from "@/assets/venue-surf-club.jpg";
+import venueCeLaVie from "@/assets/venue-ce-la-vie.jpg";
+import venueBoaSteakhouse from "@/assets/venue-boa-steakhouse.jpg";
+import venueCavalliClub from "@/assets/venue-cavalli-club.jpg";
+import venueWhiteDubai from "@/assets/venue-white-dubai.jpg";
+import venueGoldOn27 from "@/assets/venue-gold-on-27.jpg";
+import venueArmaniPrive from "@/assets/venue-armani-prive.jpg";
+import venueSky20 from "@/assets/venue-sky-2-0.jpg";
+import venueCirqueLeSoir from "@/assets/venue-cirque-le-soir.jpg";
+import venueSanBeach from "@/assets/venue-san-beach.jpg";
 
 const VIP = () => {
   const { user, signOut } = useAuth();
@@ -90,164 +99,218 @@ const VIP = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Crown className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">CÉ LA VIE Dubai</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Rooftop sophistication with 360° city views</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueCeLaVie} 
+                    alt="CÉ LA VIE Dubai"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">CÉ LA VIE Dubai</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       SLS Dubai Hotel
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Rooftop sophistication with 360° city views</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/15 to-gold/8 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Sparkles className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">BOA Steakhouse</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Premium steakhouse with panoramic Marina views</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueBoaSteakhouse} 
+                    alt="BOA Steakhouse"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">BOA Steakhouse</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Four Seasons Resort Dubai
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Premium steakhouse with panoramic Marina views</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/10 to-gold/3 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Star className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">Cavalli Club</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Luxurious dining and entertainment venue</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueCavalliClub} 
+                    alt="Cavalli Club"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Cavalli Club</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Fairmont Dubai
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Luxurious dining and entertainment venue</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Crown className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">WHITE Dubai</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Iconic rooftop club with world-class DJs</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueWhiteDubai} 
+                    alt="WHITE Dubai"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">WHITE Dubai</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Meydan Racecourse
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Iconic rooftop club with world-class DJs</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/15 to-gold/8 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Sparkles className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">Gold on 27</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Hidden speakeasy at Burj Al Arab</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueGoldOn27} 
+                    alt="Gold on 27"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Gold on 27</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Burj Al Arab Jumeirah
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Hidden speakeasy at Burj Al Arab</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/10 to-gold/3 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Star className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">Armani/Privé</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Ultra-exclusive nightclub in Burj Khalifa</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueArmaniPrive} 
+                    alt="Armani/Privé"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Armani/Privé</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Armani Hotel Dubai
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Ultra-exclusive nightclub in Burj Khalifa</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Crown className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">SKY 2.0</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Sky-high nightclub with stunning city views</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueSky20} 
+                    alt="SKY 2.0"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">SKY 2.0</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Four Points by Sheraton
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Sky-high nightclub with stunning city views</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/15 to-gold/8 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Sparkles className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">Cirque Le Soir</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Theatrical circus-themed nightclub experience</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueCirqueLeSoir} 
+                    alt="Cirque Le Soir"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Cirque Le Soir</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Fairmont Dubai
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Theatrical circus-themed nightclub experience</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
 
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-gold/10 to-gold/3 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <Star className="w-12 h-12 text-gold mx-auto mb-3" />
-                    <h3 className="text-lg font-semibold mb-2">SĀN Beach</h3>
-                    <p className="text-sm text-muted-foreground mb-3">Beachfront luxury club and restaurant</p>
-                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueSanBeach} 
+                    alt="SĀN Beach"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">SĀN Beach</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
                       <MapPin className="w-3 h-3 mr-1" />
                       Atlantis The Palm
                     </div>
-                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                      <Phone className="w-3 h-3 mr-1" />
-                      Reserve
-                    </Button>
                   </div>
+                  <p className="text-sm text-muted-foreground mb-4">Beachfront luxury club and restaurant</p>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
                 </div>
               </Card>
             </div>
