@@ -82,114 +82,174 @@ const VIP = () => {
             </p>
           </div>
 
-          {/* VIP Services Table */}
+          {/* Premium Dubai Clubs & Lounges */}
           <Card className="mb-12 overflow-hidden">
             <div className="bg-gradient-to-r from-gold/10 to-gold/5 p-6 border-b border-gold/20">
-              <h2 className="text-2xl font-bold text-center">VIP Services & Exclusive Access</h2>
+              <h2 className="text-2xl font-bold text-center">Dubai's Most Exclusive Clubs & Lounges</h2>
+              <p className="text-center text-muted-foreground mt-2">Experience the pinnacle of luxury nightlife in Dubai</p>
             </div>
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow className="border-gold/20">
-                    <TableHead className="font-semibold text-foreground">VIP Service</TableHead>
-                    <TableHead className="font-semibold text-foreground">What You Get</TableHead>
-                    <TableHead className="font-semibold text-foreground text-center">Instant Action</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow className="border-gold/10">
-                    <TableCell className="font-medium">🎤 Private Events</TableCell>
-                    <TableCell>Invitation-only galas, brand launches & after-parties at Atlantis Royal, One&Only Royal Mirage, floating Dubai Canal lounges</TableCell>
-                    <TableCell className="text-center">
-                      <Button 
-                        variant="gold" 
-                        size="sm"
-                        onClick={() => alert("Private event invitation system coming soon")}
-                      >
-                        Request Invite
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold/10">
-                    <TableCell className="font-medium">🍾 Premium Venues</TableCell>
-                    <TableCell>Skip-the-line tables at CÉ LA VI, BOA, Cavalli Club, WHITE Dubai & hidden speakeasy Gold on 27 (Burj Al Arab)</TableCell>
-                    <TableCell className="text-center">
-                      <Button 
-                        variant="gold" 
-                        size="sm"
-                        onClick={() => alert("Table reservation system coming soon")}
-                      >
-                        Reserve Table
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold/10">
-                    <TableCell className="font-medium">🎪 Exclusive Galas</TableCell>
-                    <TableCell>Red-carpet nights during Dubai World Cup, Art Dubai, GITEX, Diwali @ Bollywood Parks</TableCell>
-                    <TableCell className="text-center">
-                      <Button 
-                        variant="gold" 
-                        size="sm"
-                        onClick={() => alert("Exclusive gala reservation coming soon")}
-                      >
-                        Lock My Spot
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold/10">
-                    <TableCell className="font-medium">🚪 Elite Clubs</TableCell>
-                    <TableCell>Lifetime-style access to Armani/Privé, SKY 2.0, Cirque Le Soir, SĀN Beach, DRIFT</TableCell>
-                    <TableCell className="text-center">
-                      <Button 
-                        variant="gold" 
-                        size="sm"
-                        onClick={() => alert("Elite club pass activation coming soon")}
-                      >
-                        Activate Pass
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold/10">
-                    <TableCell className="font-medium">📅 Live Event Calendar</TableCell>
-                    <TableCell>Real-time VIP-only calendar, 1-tap RSVP & wait-list sync to Apple/Google</TableCell>
-                    <TableCell className="text-center">
-                      <Button 
-                        variant="gold" 
-                        size="sm"
-                        onClick={() => alert("Live event calendar coming soon")}
-                      >
-                        View Calendar
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold/10">
-                    <TableCell className="font-medium">🎁 Curated Luxury</TableCell>
-                    <TableCell>Personal hostess, limo transfers, complimentary champagne, backstage meet-and-greets</TableCell>
-                    <TableCell className="text-center">
-                      <Button 
-                        variant="gold" 
-                        size="sm"
-                        onClick={() => alert("Luxury upgrade system coming soon")}
-                      >
-                        Upgrade My Night
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow className="border-gold/10">
-                    <TableCell className="font-medium">⚡ Priority Perks</TableCell>
-                    <TableCell>Skip queues, best-table guarantee, chef's tasting menu, discrete billing</TableCell>
-                    <TableCell className="text-center">
-                      <Button 
-                        variant="gold" 
-                        size="sm"
-                        onClick={() => alert("Priority booking system coming soon")}
-                      >
-                        Book Priority
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Crown className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">CÉ LA VIE Dubai</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Rooftop sophistication with 360° city views</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      SLS Dubai Hotel
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/15 to-gold/8 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Sparkles className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">BOA Steakhouse</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Premium steakhouse with panoramic Marina views</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Four Seasons Resort Dubai
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/10 to-gold/3 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Star className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">Cavalli Club</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Luxurious dining and entertainment venue</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Fairmont Dubai
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Crown className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">WHITE Dubai</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Iconic rooftop club with world-class DJs</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Meydan Racecourse
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/15 to-gold/8 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Sparkles className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">Gold on 27</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Hidden speakeasy at Burj Al Arab</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Burj Al Arab Jumeirah
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/10 to-gold/3 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Star className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">Armani/Privé</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Ultra-exclusive nightclub in Burj Khalifa</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Armani Hotel Dubai
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Crown className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">SKY 2.0</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Sky-high nightclub with stunning city views</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Four Points by Sheraton
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/15 to-gold/8 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Sparkles className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">Cirque Le Soir</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Theatrical circus-themed nightclub experience</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Fairmont Dubai
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-gold/10 to-gold/3 flex items-center justify-center">
+                  <div className="text-center p-6">
+                    <Star className="w-12 h-12 text-gold mx-auto mb-3" />
+                    <h3 className="text-lg font-semibold mb-2">SĀN Beach</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Beachfront luxury club and restaurant</p>
+                    <div className="flex items-center text-xs text-muted-foreground mb-3">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      Atlantis The Palm
+                    </div>
+                    <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                      <Phone className="w-3 h-3 mr-1" />
+                      Reserve
+                    </Button>
+                  </div>
+                </div>
+              </Card>
             </div>
           </Card>
 
