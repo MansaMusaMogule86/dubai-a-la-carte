@@ -16,7 +16,7 @@ export const Footer = () => {
               <Button variant="premium" size="xl" className="text-base">
                 Start Your Journey
               </Button>
-              <Button variant="outline" size="xl" className="border-white/30 hover:bg-white/10 text-gold">
+              <Button variant="outline" size="xl" className="border-white/30 bg-slate-50 text-zinc-950">
                 Book Consultation
               </Button>
             </div>
