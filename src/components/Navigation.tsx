@@ -16,7 +16,6 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
   const services = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard, description: "Welcome client, request input, quick actions" },
     { name: "Bookings", href: "/bookings", icon: Plane, description: "View & manage flights/hotels/limo bookings" },
-    { name: "Concierge Chat", href: "/chat", icon: MessageSquare, description: "Live AI + human support" },
     { name: "Real Estate", href: "/real-estate", icon: Home, description: "View luxury listings + book agent" },
     { name: "Business Setup", href: "/business", icon: Building2, description: "Start new company, submit documents" },
     { name: "Schooling", href: "/schooling", icon: GraduationCap, description: "Enroll child, compare options" },

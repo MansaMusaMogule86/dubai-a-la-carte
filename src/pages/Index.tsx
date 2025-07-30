@@ -3,6 +3,7 @@ import { Services } from "@/components/Services";
 import { Pricing } from "@/components/Pricing";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
+import { ChatPopup } from "@/components/ChatPopup";
 import { useAuth } from "@/hooks/useAuth";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <Services />
       <Pricing />
       <Footer />
+      <ChatPopup />
     </div>
   );
 };
