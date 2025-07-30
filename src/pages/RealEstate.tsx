@@ -4,8 +4,9 @@ import { Home, MapPin, Calendar, Eye, Bed, Bath, Car, Star, ArrowRight, Search, 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import yachtLuxury from "@/assets/yacht-luxury.webp";
-import privateJet from "@/assets/private-jet.webp";
+import penthouseBurjKhalifa from "@/assets/penthouse-burj-khalifa.jpg";
+import villaPalmJumeirah from "@/assets/villa-palm-jumeirah.jpg";
+import apartmentMarinaWalk from "@/assets/apartment-marina-walk.jpg";
 
 const RealEstate = () => {
   const { user, signOut } = useAuth();
@@ -21,7 +22,7 @@ const RealEstate = () => {
       bathrooms: 5,
       parking: 3,
       area: "6,500 sq ft",
-      image: yachtLuxury,
+      image: penthouseBurjKhalifa,
       rating: 5.0,
       features: ["Private Pool", "360° City Views", "Concierge Service"]
     },
@@ -35,7 +36,7 @@ const RealEstate = () => {
       bathrooms: 7,
       parking: 4,
       area: "8,200 sq ft",
-      image: privateJet,
+      image: villaPalmJumeirah,
       rating: 4.9,
       features: ["Private Beach", "Garden", "Maid's Room"]
     },
@@ -49,7 +50,7 @@ const RealEstate = () => {
       bathrooms: 3,
       parking: 2,
       area: "1,800 sq ft",
-      image: yachtLuxury,
+      image: apartmentMarinaWalk,
       rating: 4.8,
       features: ["Marina Views", "Gym Access", "Pool"]
     }
