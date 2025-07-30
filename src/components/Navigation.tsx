@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, User, LogOut } from "lucide-react";
+import { Menu, X, User, LogOut, ChevronDown, LayoutDashboard, Plane, MessageSquare, Home, Building2, GraduationCap, Crown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 interface NavigationProps {
   user?: any;
@@ -12,12 +13,20 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleAuthClick = () => {
-    if (user) {
-      navigate("/dashboard");
-    } else {
-      navigate("/auth");
-    }
+  const services = [
+    { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard, description: "Welcome client, request input, quick actions" },
+    { name: "Bookings", href: "/bookings", icon: Plane, description: "View & manage flight/hotel/limo/nightclub bookings" },
+    { name: "Concierge Chat", href: "/chat", icon: MessageSquare, description: "Live AI + human support" },
+    { name: "Real Estate", href: "/real-estate", icon: Home, description: "View luxury listings + book agent" },
+    { name: "Business Setup", href: "/business", icon: Building2, description: "Start new company, submit documents" },
+    { name: "Schooling", href: "/schooling", icon: GraduationCap, description: "Enroll child, compare options" },
+    { name: "VIP Lounge Access", href: "/vip", icon: Crown, description: "See exclusive events, reserve tables" },
+    { name: "My Profile", href: "/profile", icon: User, description: "Manage info, upload passport, pay invoices" },
+  ];
+
+  const handleServiceClick = (href: string) => {
+    navigate(href);
+    setIsOpen(false);
   };
 
   return (
@@ -37,9 +46,34 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
-              Services
-            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center space-x-1 text-muted-foreground hover:text-foreground">
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-80 p-2 bg-popover border-border shadow-luxury">
+                <div className="grid grid-cols-1 gap-1">
+                  {services.map((service, index) => {
+                    const Icon = service.icon;
+                    return (
+                      <DropdownMenuItem
+                        key={service.name}
+                        onClick={() => handleServiceClick(service.href)}
+                        className="flex items-start space-x-3 p-3 cursor-pointer hover:bg-accent/50 rounded-md transition-colors"
+                      >
+                        <Icon className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-foreground">{service.name}</div>
+                          <div className="text-sm text-muted-foreground line-clamp-2">{service.description}</div>
+                        </div>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
               Pricing
             </a>
@@ -90,16 +124,27 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              <a 
-                href="#services" 
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </a>
+              <div className="space-y-2">
+                <div className="text-sm font-medium text-muted-foreground px-3 py-1">Services</div>
+                {services.map((service) => {
+                  const Icon = service.icon;
+                  return (
+                    <button
+                      key={service.name}
+                      onClick={() => handleServiceClick(service.href)}
+                      className="flex items-center space-x-3 w-full px-3 py-2 text-left hover:bg-accent/50 rounded-md transition-colors"
+                    >
+                      <Icon className="w-4 h-4 text-gold flex-shrink-0" />
+                      <span className="text-muted-foreground hover:text-foreground transition-colors">
+                        {service.name}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
               <a 
                 href="#pricing" 
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
