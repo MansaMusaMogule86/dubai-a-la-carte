@@ -86,7 +86,7 @@ const VIP = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              VIP Lounge Access Dubai – <span className="text-gold">Exclusive Events & Premium Venues 2025</span>
+              Dubai's Most Exclusive <span className="text-gold">Clubs & Lounges 2025</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Secure your VIP Lounge Access in Dubai 2025—exclusive tables, private events, and premium nightlife with instant booking and red-carpet treatment.
