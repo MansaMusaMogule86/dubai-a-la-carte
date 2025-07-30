@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Check, Star, Crown, Zap } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Check, Star, Crown, Zap, Lock } from "lucide-react";
+import { useState } from "react";
 
 const plans = [
   {
@@ -63,8 +66,40 @@ const plans = [
 ];
 
 export const Pricing = () => {
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isValidEmail, setIsValidEmail] = useState(false);
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setEmail(value);
+    setIsValidEmail(validateEmail(value));
+  };
+
+  const handleRevealPlans = () => {
+    if (isValidEmail) {
+      setIsUnlocked(true);
+      setShowModal(false);
+    }
+  };
+
+  const handleSectionClick = () => {
+    if (!isUnlocked) {
+      setShowModal(true);
+    }
+  };
+
   return (
-    <section className="py-24 bg-background">
+    <section 
+      id="pricing"
+      className="py-24 bg-background relative"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -77,78 +112,102 @@ export const Pricing = () => {
           </p>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {plans.map((plan, index) => (
-            <Card 
-              key={plan.name}
-              className={`relative overflow-hidden hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 animate-scale-in ${
-                plan.popular 
-                  ? 'ring-2 ring-gold shadow-gold scale-105 lg:scale-110' 
-                  : ''
-              }`}
-              style={{ animationDelay: `${index * 200}ms` }}
+        {/* Pricing Cards Container */}
+        <div className="relative">
+          {/* Glassmorphism Overlay */}
+          {!isUnlocked && (
+            <div 
+              className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer"
+              onClick={handleSectionClick}
             >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div className="absolute top-0 right-0 bg-gradient-gold text-primary text-sm font-medium px-3 py-1 rounded-bl-lg">
-                  Most Popular
-                </div>
-              )}
-
-              <CardHeader className="text-center pb-2">
-                {/* Icon */}
-                <div className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-4 ${
-                  plan.popular ? 'bg-gradient-gold' : 'bg-secondary'
-                }`}>
-                  <plan.icon className={`w-8 h-8 ${
-                    plan.popular ? 'text-primary' : 'text-primary'
-                  }`} />
-                </div>
-
-                {/* Plan Name */}
-                <h3 className="text-2xl font-bold text-primary mb-2">
-                  {plan.name}
-                </h3>
-
-                {/* Price */}
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-primary">
-                    {plan.price}
-                  </span>
-                  <span className="text-muted-foreground text-lg">
-                    {plan.period}
-                  </span>
-                </div>
-
-                {/* Description */}
-                <p className="text-muted-foreground">
-                  {plan.description}
+              <div className="bg-background/20 backdrop-blur-md border border-gold/20 rounded-2xl p-8 text-center shadow-luxury hover:bg-background/30 transition-all duration-300">
+                <Lock className="w-12 h-12 text-gold mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-primary mb-2">Exclusive Access</h3>
+                <p className="text-muted-foreground mb-4">
+                  Click to unlock our private concierge tiers
                 </p>
-              </CardHeader>
+                <div className="text-sm text-gold font-medium">
+                  Tap to reveal pricing
+                </div>
+              </div>
+            </div>
+          )}
 
-              <CardContent className="pt-0">
-                {/* Features List */}
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start">
-                      <Check className="w-5 h-5 text-gold mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-sm text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+          {/* Pricing Cards */}
+          <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 transition-all duration-500 ${
+            !isUnlocked ? 'blur-sm pointer-events-none' : ''
+          }`}>
+            {plans.map((plan, index) => (
+              <Card 
+                key={plan.name}
+                className={`relative overflow-hidden hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 animate-scale-in ${
+                  plan.popular 
+                    ? 'ring-2 ring-gold shadow-gold scale-105 lg:scale-110' 
+                    : ''
+                }`}
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                {/* Popular Badge */}
+                {plan.popular && (
+                  <div className="absolute top-0 right-0 bg-gradient-gold text-primary text-sm font-medium px-3 py-1 rounded-bl-lg">
+                    Most Popular
+                  </div>
+                )}
 
-                {/* CTA Button */}
-                <Button 
-                  variant={plan.popular ? "premium" : "elegant"}
-                  size="lg"
-                  className="w-full"
-                >
-                  {plan.cta}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                <CardHeader className="text-center pb-2">
+                  {/* Icon */}
+                  <div className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-4 ${
+                    plan.popular ? 'bg-gradient-gold' : 'bg-secondary'
+                  }`}>
+                    <plan.icon className={`w-8 h-8 ${
+                      plan.popular ? 'text-primary' : 'text-primary'
+                    }`} />
+                  </div>
+
+                  {/* Plan Name */}
+                  <h3 className="text-2xl font-bold text-primary mb-2">
+                    {plan.name}
+                  </h3>
+
+                  {/* Price */}
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-primary">
+                      {plan.price}
+                    </span>
+                    <span className="text-muted-foreground text-lg">
+                      {plan.period}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground">
+                    {plan.description}
+                  </p>
+                </CardHeader>
+
+                <CardContent className="pt-0">
+                  {/* Features List */}
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start">
+                        <Check className="w-5 h-5 text-gold mt-0.5 mr-3 flex-shrink-0" />
+                        <span className="text-sm text-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA Button */}
+                  <Button 
+                    variant={plan.popular ? "premium" : "elegant"}
+                    size="lg"
+                    className="w-full"
+                  >
+                    {plan.cta}
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Additional Info */}
@@ -162,6 +221,46 @@ export const Pricing = () => {
           </Button>
         </div>
       </div>
+
+      {/* Email Capture Modal */}
+      <Dialog open={showModal} onOpenChange={setShowModal}>
+        <DialogContent className="sm:max-w-md bg-background border border-gold/20">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-center text-primary mb-2">
+              Unlock Our Private Concierge Tiers
+            </DialogTitle>
+            <p className="text-center text-muted-foreground">
+              Enter your email to view pricing & apply for membership
+            </p>
+          </DialogHeader>
+          
+          <div className="space-y-4 py-4">
+            <div className="space-y-2">
+              <Input
+                type="email"
+                placeholder="Enter your email address"
+                value={email}
+                onChange={handleEmailChange}
+                className="w-full"
+              />
+            </div>
+            
+            <Button 
+              onClick={handleRevealPlans}
+              disabled={!isValidEmail}
+              variant="premium"
+              size="lg"
+              className="w-full"
+            >
+              Reveal Plans
+            </Button>
+            
+            <p className="text-xs text-center text-muted-foreground">
+              By submitting, you agree to receive exclusive offers and updates about our luxury concierge services.
+            </p>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
