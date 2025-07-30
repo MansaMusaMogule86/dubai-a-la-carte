@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
-import dubaiHero from "@/assets/dubai-hero.jpg";
+import dubaiHero from "@/assets/dubai-hero.webp";
 
 export const Hero = () => {
   return (
