@@ -7,6 +7,10 @@ import { Badge } from "@/components/ui/badge";
 import penthouseBurjKhalifa from "@/assets/penthouse-burj-khalifa.jpg";
 import villaPalmJumeirah from "@/assets/villa-palm-jumeirah.jpg";
 import apartmentMarinaWalk from "@/assets/apartment-marina-walk.jpg";
+import locationDowntownDubai from "@/assets/location-downtown-dubai.jpg";
+import locationPalmJumeirah from "@/assets/location-palm-jumeirah.jpg";
+import locationDubaiMarina from "@/assets/location-dubai-marina.jpg";
+import locationDIFC from "@/assets/location-difc.jpg";
 
 const RealEstate = () => {
   const { user, signOut } = useAuth();
@@ -62,28 +66,32 @@ const RealEstate = () => {
       description: "Heart of the city with iconic landmarks",
       avgPrice: "AED 2,500/sq ft",
       properties: 150,
-      highlights: ["Burj Khalifa", "Dubai Mall", "Dubai Fountain"]
+      highlights: ["Burj Khalifa", "Dubai Mall", "Dubai Fountain"],
+      image: locationDowntownDubai
     },
     {
       name: "Palm Jumeirah",
       description: "Exclusive island lifestyle",
       avgPrice: "AED 2,800/sq ft",
       properties: 89,
-      highlights: ["Private Beaches", "Luxury Resorts", "Iconic Views"]
+      highlights: ["Private Beaches", "Luxury Resorts", "Iconic Views"],
+      image: locationPalmJumeirah
     },
     {
       name: "Dubai Marina",
       description: "Waterfront living with marina views",
       avgPrice: "AED 1,900/sq ft",
       properties: 240,
-      highlights: ["Marina Walk", "JBR Beach", "Fine Dining"]
+      highlights: ["Marina Walk", "JBR Beach", "Fine Dining"],
+      image: locationDubaiMarina
     },
     {
       name: "DIFC",
       description: "Financial district with modern towers",
       avgPrice: "AED 2,200/sq ft",
       properties: 78,
-      highlights: ["Business Hub", "Art Galleries", "Upscale Dining"]
+      highlights: ["Business Hub", "Art Galleries", "Upscale Dining"],
+      image: locationDIFC
     }
   ];
 
@@ -273,7 +281,14 @@ const RealEstate = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {primeLocations.map((location, index) => (
-                <Card key={index} className="p-6 hover:shadow-card transition-all duration-300 cursor-pointer group">
+                <Card key={index} className="p-6 hover:shadow-card transition-all duration-300 cursor-pointer group overflow-hidden">
+                  <div className="aspect-video rounded-lg overflow-hidden mb-4">
+                    <img 
+                      src={location.image} 
+                      alt={location.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <h3 className="text-lg font-semibold mb-2 group-hover:text-gold transition-colors">{location.name}</h3>
                   <p className="text-muted-foreground text-sm mb-3">{location.description}</p>
                   
