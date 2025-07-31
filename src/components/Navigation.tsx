@@ -44,35 +44,16 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center space-x-1 text-muted-foreground hover:text-foreground">
-                  <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-80 p-2 bg-popover border-border shadow-luxury">
-                <div className="grid grid-cols-1 gap-1">
-                  {services.map((service, index) => {
-                    const Icon = service.icon;
-                    return (
-                      <DropdownMenuItem
-                        key={service.name}
-                        onClick={() => handleServiceClick(service.href)}
-                        className="flex items-start space-x-3 p-3 cursor-pointer hover:bg-accent/50 rounded-md transition-colors"
-                      >
-                        <Icon className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
-                        <div className="flex-1 min-w-0">
-                          <div className="font-medium text-foreground">{service.name}</div>
-                          <div className="text-sm text-muted-foreground line-clamp-2">{service.description}</div>
-                        </div>
-                      </DropdownMenuItem>
-                    );
-                  })}
-                </div>
-              </DropdownMenuContent>
-            </DropdownMenu>
+          <div className="hidden md:flex items-center space-x-6">
+            {services.map((service) => (
+              <button
+                key={service.name}
+                onClick={() => handleServiceClick(service.href)}
+                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+              >
+                {service.name}
+              </button>
+            ))}
             {user ? (
               <div className="flex items-center space-x-4">
                 <Button
