@@ -39,11 +39,71 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
         { name: "Yachts", href: "/bookings/yachts" }
       ]
     },
-    { name: "Real Estate", href: "/real-estate", icon: Home, description: "View luxury listings + book agent" },
-    { name: "Business Setup", href: "/business", icon: Building2, description: "Start new company, submit documents" },
-    { name: "Schooling", href: "/schooling", icon: GraduationCap, description: "Enroll child, compare options" },
-    { name: "VIP Lounge Access", href: "/vip", icon: Crown, description: "See exclusive events, reserve tables" },
-    { name: "My Profile", href: "/profile", icon: User, description: "Manage info, upload passport, pay invoices" },
+    { 
+      name: "Real Estate", 
+      href: "/real-estate", 
+      icon: Home, 
+      description: "View luxury listings + book agent",
+      subCategories: [
+        { name: "All Properties", href: "/real-estate" },
+        { name: "Villas", href: "/real-estate/villas" },
+        { name: "Apartments", href: "/real-estate/apartments" },
+        { name: "Penthouses", href: "/real-estate/penthouses" },
+        { name: "Book Agent", href: "/real-estate/agent" }
+      ]
+    },
+    { 
+      name: "Business Setup", 
+      href: "/business", 
+      icon: Building2, 
+      description: "Start new company, submit documents",
+      subCategories: [
+        { name: "Company Formation", href: "/business" },
+        { name: "License Types", href: "/business/licenses" },
+        { name: "Banking Setup", href: "/business/banking" },
+        { name: "Visa Processing", href: "/business/visas" },
+        { name: "Legal Documentation", href: "/business/legal" }
+      ]
+    },
+    { 
+      name: "Schooling", 
+      href: "/schooling", 
+      icon: GraduationCap, 
+      description: "Enroll child, compare options",
+      subCategories: [
+        { name: "All Schools", href: "/schooling" },
+        { name: "International Schools", href: "/schooling/international" },
+        { name: "British Curriculum", href: "/schooling/british" },
+        { name: "American Curriculum", href: "/schooling/american" },
+        { name: "Application Support", href: "/schooling/support" }
+      ]
+    },
+    { 
+      name: "VIP Lounge Access", 
+      href: "/vip", 
+      icon: Crown, 
+      description: "See exclusive events, reserve tables",
+      subCategories: [
+        { name: "All Events", href: "/vip" },
+        { name: "Private Clubs", href: "/vip/clubs" },
+        { name: "Restaurants", href: "/vip/restaurants" },
+        { name: "Nightlife", href: "/vip/nightlife" },
+        { name: "Exclusive Events", href: "/vip/events" }
+      ]
+    },
+    { 
+      name: "My Profile", 
+      href: "/profile", 
+      icon: User, 
+      description: "Manage info, upload passport, pay invoices",
+      subCategories: [
+        { name: "Profile Overview", href: "/profile" },
+        { name: "Personal Info", href: "/profile/info" },
+        { name: "Documents", href: "/profile/documents" },
+        { name: "Payment Methods", href: "/profile/payments" },
+        { name: "Invoices", href: "/profile/invoices" }
+      ]
+    },
   ];
 
   const handleServiceClick = (href: string) => {
