@@ -197,15 +197,6 @@ const PremiumBookingCard = ({ booking }: { booking: BookingOption }) => {
         </div>
         <div className="flex gap-2">
           <Button 
-            variant="outline" 
-            size="sm" 
-            className="text-xs"
-            disabled={booking.isFullyBooked}
-            onClick={handleAddToItinerary}
-          >
-            Add to Itinerary
-          </Button>
-          <Button 
             size="sm" 
             className="text-xs"
             disabled={booking.isFullyBooked}
