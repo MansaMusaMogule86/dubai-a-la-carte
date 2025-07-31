@@ -130,7 +130,14 @@ const VIP = () => {
                       SLS Dubai Hotel
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Rooftop sophistication with 360° city views</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Rooftop sophistication</span> with <span className="text-gold">360° city views</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Modern Asian</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Cocktails</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Sky Lounge</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
