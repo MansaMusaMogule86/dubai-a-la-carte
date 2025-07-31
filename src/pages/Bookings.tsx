@@ -8,6 +8,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, lazy, Suspense } from "react";
 import { useToast } from "@/hooks/use-toast";
 
+// Import flight images
+import flightEtihad from "@/assets/flight-etihad.jpg";
+import flightEmirates from "@/assets/flight-emirates.jpg";
+import flightAirFrance from "@/assets/flight-airfrance.jpg";
+import flightAlgeria from "@/assets/flight-algeria.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -15,7 +21,7 @@ interface BookingOption {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image: string | any;
   price: string;
   duration: string;
   location: string;
@@ -46,6 +52,19 @@ const PremiumBookingCard = ({ booking }: { booking: BookingOption }) => {
   return (
     <Card className="overflow-hidden hover:shadow-luxury hover:scale-105 transition-all duration-300 group cursor-pointer">
     <div className="relative h-48 bg-gradient-to-br from-gold/20 to-primary/20">
+      {typeof booking.image === 'string' && booking.image.startsWith('/') ? (
+        <img 
+          src={booking.image} 
+          alt={booking.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : booking.image && typeof booking.image !== 'string' ? (
+        <img 
+          src={booking.image} 
+          alt={booking.title}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : null}
       <div className="absolute inset-0 bg-black/20" />
       <div className="absolute top-4 left-4 flex gap-2">
         {booking.isExclusive && (
@@ -155,14 +174,101 @@ const Bookings = () => {
   const categories = ["All", "Flights", "Hotels", "Yachts", "Limos", "Desert Safari", "Helicopter Rides"];
 
   const premiumBookings: BookingOption[] = [
+    // Emirates Flights
     {
-      id: "1",
-      title: "Private Jet to Paris",
-      description: "Gulfstream G650 with personal concierge",
-      image: "luxury-jet",
-      price: "$45,000",
-      duration: "7 hours",
+      id: "emirates-1",
+      title: "Emirates First Class A380",
+      description: "Dubai to London with private suite & onboard shower",
+      image: flightEmirates,
+      price: "$8,500",
+      duration: "7h 45m",
+      location: "Dubai → London",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Flights"
+    },
+    {
+      id: "emirates-2",
+      title: "Emirates Business Class",
+      description: "Dubai to New York with lie-flat seats & gourmet dining",
+      image: flightEmirates,
+      price: "$4,200",
+      duration: "12h 30m",
+      location: "Dubai → New York",
+      rating: 4.8,
+      isHotDeal: true,
+      category: "Flights"
+    },
+    // Etihad Airways
+    {
+      id: "etihad-1",
+      title: "Etihad Residence A380",
+      description: "3-room suite with bedroom, bathroom & living room",
+      image: flightEtihad,
+      price: "$15,000",
+      duration: "7h 15m",
+      location: "Dubai → London",
+      rating: 5.0,
+      isExclusive: true,
+      category: "Flights"
+    },
+    {
+      id: "etihad-2",
+      title: "Etihad First Apartment",
+      description: "Private apartment with chef & butler service",
+      image: flightEtihad,
+      price: "$12,500",
+      duration: "14h 20m",
+      location: "Dubai → Sydney",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Flights"
+    },
+    // Air France
+    {
+      id: "airfrance-1",
+      title: "Air France La Première",
+      description: "Ultra-luxury cabin with Michelin-starred cuisine",
+      image: flightAirFrance,
+      price: "$9,800",
+      duration: "7h 30m",
       location: "Dubai → Paris",
+      rating: 4.8,
+      isExclusive: true,
+      category: "Flights"
+    },
+    {
+      id: "airfrance-2",
+      title: "Air France Business",
+      description: "Premium business class with fine French dining",
+      image: flightAirFrance,
+      price: "$3,800",
+      duration: "7h 30m",
+      location: "Dubai → Paris",
+      rating: 4.7,
+      category: "Flights"
+    },
+    // Air Algérie
+    {
+      id: "algeria-1",
+      title: "Air Algérie Business Plus",
+      description: "Premium service to Algiers with traditional hospitality",
+      image: flightAlgeria,
+      price: "$2,200",
+      duration: "8h 45m",
+      location: "Dubai → Algiers",
+      rating: 4.5,
+      category: "Flights"
+    },
+    // Private Jets
+    {
+      id: "private-1",
+      title: "Gulfstream G650ER",
+      description: "Ultra-long range private jet with personal crew",
+      image: flightEmirates,
+      price: "$45,000",
+      duration: "Custom",
+      location: "Dubai → Worldwide",
       rating: 5.0,
       isExclusive: true,
       category: "Flights"
