@@ -85,7 +85,7 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
       ]
     },
     { 
-      name: "My Profile", 
+      name: "Dashboard", 
       href: "/profile", 
       icon: User, 
       description: "Manage info, upload passport, pay invoices",
