@@ -32,6 +32,16 @@ import hotelMarriottMarquis from "@/assets/hotel-marriott-marquis.jpg";
 import hotelRixosJBR from "@/assets/hotel-rixos-jbr.jpg";
 import hotelShangriLaMarina from "@/assets/hotel-shangri-la-marina.jpg";
 
+// Import yacht images
+import yachtSuperyachtBurj from "@/assets/yacht-superyacht-burj.jpg";
+import yachtMegaJBR from "@/assets/yacht-mega-jbr.jpg";
+import yachtMotorMarina from "@/assets/yacht-motor-marina.jpg";
+import yachtCatamaranPalm from "@/assets/yacht-catamaran-palm.jpg";
+import yachtSailingCoast from "@/assets/yacht-sailing-coast.jpg";
+import yachtSportAtlantis from "@/assets/yacht-sport-atlantis.jpg";
+import yachtExplorerCreek from "@/assets/yacht-explorer-creek.jpg";
+import yachtFlybridgeMarina from "@/assets/yacht-flybridge-marina.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -494,15 +504,100 @@ const Bookings = () => {
       isExclusive: true,
       category: "Desert Safari"
     },
+    // Yachts - Superyachts (150ft+)
     {
-      id: "4",
-      title: "Superyacht Charter",
-      description: "180ft Azimut with crew & water sports",
-      image: "superyacht",
+      id: "superyacht-burj",
+      title: "Azimut 150ft Superyacht",
+      description: "Ultra-luxury superyacht with helipad & crew near Burj Al Arab",
+      image: yachtSuperyachtBurj,
+      price: "$18,000",
+      duration: "Full day",
+      location: "Burj Al Arab Waters",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Yachts"
+    },
+    {
+      id: "megayacht-jbr",
+      title: "Ferretti 200ft Megayacht",
+      description: "Mega yacht with 8 suites, spa & water toys at JBR",
+      image: yachtMegaJBR,
+      price: "$35,000",
+      duration: "Full day",
+      location: "JBR Marina",
+      rating: 5.0,
+      isExclusive: true,
+      category: "Yachts"
+    },
+    // Yachts - Motor Yachts (70-100ft)
+    {
+      id: "motoryacht-marina",
+      title: "Sunseeker 80ft Motor Yacht",
+      description: "High-performance motor yacht with luxury interiors",
+      image: yachtMotorMarina,
+      price: "$8,500",
+      duration: "Half day",
+      location: "Dubai Marina",
+      rating: 4.7,
+      category: "Yachts"
+    },
+    {
+      id: "flybridge-marina",
+      title: "Princess 95ft Flybridge",
+      description: "Spacious flybridge yacht with panoramic deck views",
+      image: yachtFlybridgeMarina,
       price: "$12,000",
       duration: "Full day",
-      location: "Dubai Marina",
+      location: "Dubai Marina Harbor",
+      rating: 4.8,
+      category: "Yachts"
+    },
+    // Yachts - Sailing & Catamarans
+    {
+      id: "catamaran-palm",
+      title: "Lagoon 60ft Catamaran",
+      description: "Stable catamaran perfect for families & groups",
+      image: yachtCatamaranPalm,
+      price: "$4,200",
+      duration: "Half day",
+      location: "Palm Jumeirah",
+      rating: 4.6,
+      isHotDeal: true,
+      category: "Yachts"
+    },
+    {
+      id: "sailing-coast",
+      title: "Swan 70ft Sailing Yacht",
+      description: "Traditional sailing experience with modern luxury",
+      image: yachtSailingCoast,
+      price: "$6,800",
+      duration: "Full day",
+      location: "Dubai Coast",
+      rating: 4.5,
+      category: "Yachts"
+    },
+    // Yachts - Sport & Adventure
+    {
+      id: "sport-atlantis",
+      title: "Pershing 45ft Sport Yacht",
+      description: "High-speed sport yacht for thrill seekers",
+      image: yachtSportAtlantis,
+      price: "$3,500",
+      duration: "4 hours",
+      location: "Atlantis Waters",
+      rating: 4.4,
+      category: "Yachts"
+    },
+    {
+      id: "explorer-creek",
+      title: "Explorer 120ft Expedition",
+      description: "Adventure yacht with helicopter & diving equipment",
+      image: yachtExplorerCreek,
+      price: "$22,000",
+      duration: "Multi-day",
+      location: "Dubai Creek & Beyond",
       rating: 4.9,
+      isExclusive: true,
       category: "Yachts"
     },
     {
