@@ -14,6 +14,16 @@ import flightEmirates from "@/assets/flight-emirates.jpg";
 import flightAirFrance from "@/assets/flight-airfrance.jpg";
 import flightAlgeria from "@/assets/flight-algeria.jpg";
 
+// Import hotel images
+import hotelBurjAlArab from "@/assets/hotel-burj-al-arab.jpg";
+import hotelEmiratesPalace from "@/assets/hotel-emirates-palace.jpg";
+import hotelAtlantisPalm from "@/assets/hotel-atlantis-palm.jpg";
+import hotelFourSeasons from "@/assets/hotel-four-seasons.jpg";
+import hotelAlMaha from "@/assets/hotel-al-maha.jpg";
+import hotelArmani from "@/assets/hotel-armani.jpg";
+import hotelRoyalMirage from "@/assets/hotel-royal-mirage.jpg";
+import hotelRitzCarlton from "@/assets/hotel-ritz-carlton.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -273,16 +283,100 @@ const Bookings = () => {
       isExclusive: true,
       category: "Flights"
     },
+    // Hotels - Dubai
     {
-      id: "2",
-      title: "Atlantis Royal Suite",
-      description: "Penthouse with private butler & infinity pool",
-      image: "atlantis-suite",
-      price: "$8,500",
+      id: "burj-al-arab",
+      title: "Burj Al Arab Royal Suite",
+      description: "Two-level presidential suite with personal butler & Rolls-Royce",
+      image: hotelBurjAlArab,
+      price: "$25,000",
       duration: "Per night",
-      location: "Palm Jumeirah",
+      location: "Jumeirah Beach, Dubai",
+      rating: 5.0,
+      isExclusive: true,
+      category: "Hotels"
+    },
+    {
+      id: "atlantis-royal",
+      title: "Atlantis The Royal Cloud 22",
+      description: "Sky-high penthouse with private pool & underwater views",
+      image: hotelAtlantisPalm,
+      price: "$35,000",
+      duration: "Per night",
+      location: "Palm Jumeirah, Dubai",
       rating: 4.9,
+      isExclusive: true,
+      category: "Hotels"
+    },
+    {
+      id: "armani-hotel",
+      title: "Armani Hotel Dubai",
+      description: "Luxury suite in Burj Khalifa with city panoramic views",
+      image: hotelArmani,
+      price: "$3,500",
+      duration: "Per night",
+      location: "Downtown Dubai",
+      rating: 4.8,
       isHotDeal: true,
+      category: "Hotels"
+    },
+    {
+      id: "four-seasons-dubai",
+      title: "Four Seasons Resort Dubai",
+      description: "Beachfront presidential suite with private beach access",
+      image: hotelFourSeasons,
+      price: "$4,200",
+      duration: "Per night",
+      location: "Jumeirah Beach, Dubai",
+      rating: 4.7,
+      category: "Hotels"
+    },
+    {
+      id: "royal-mirage",
+      title: "One&Only Royal Mirage",
+      description: "Arabian-style resort with private beach & palace gardens",
+      image: hotelRoyalMirage,
+      price: "$2,800",
+      duration: "Per night",
+      location: "Dubai Marina",
+      rating: 4.6,
+      category: "Hotels"
+    },
+    // Hotels - Abu Dhabi
+    {
+      id: "emirates-palace",
+      title: "Emirates Palace Hotel",
+      description: "Presidential suite with gold-plated amenities & private beach",
+      image: hotelEmiratesPalace,
+      price: "$15,000",
+      duration: "Per night",
+      location: "Corniche, Abu Dhabi",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Hotels"
+    },
+    // Hotels - Desert Properties
+    {
+      id: "al-maha-desert",
+      title: "Al Maha Desert Resort",
+      description: "Luxury desert villa with private pool & wildlife sanctuary",
+      image: hotelAlMaha,
+      price: "$3,800",
+      duration: "Per night",
+      location: "Dubai Desert Conservation Reserve",
+      rating: 4.8,
+      isExclusive: true,
+      category: "Hotels"
+    },
+    {
+      id: "ritz-carlton-rak",
+      title: "Ritz-Carlton Ras Al Khaimah",
+      description: "Desert villa with mountain views & luxury spa treatments",
+      image: hotelRitzCarlton,
+      price: "$2,200",
+      duration: "Per night",
+      location: "Al Wadi Desert, RAK",
+      rating: 4.7,
       category: "Hotels"
     },
     {
