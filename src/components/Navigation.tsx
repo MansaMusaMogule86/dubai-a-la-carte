@@ -15,18 +15,6 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
 
   const services = [
     { 
-      name: "Dashboard", 
-      href: "/dashboard", 
-      icon: LayoutDashboard, 
-      description: "Welcome client, request input, quick actions",
-      subCategories: [
-        { name: "Overview", href: "/dashboard" },
-        { name: "Analytics", href: "/dashboard/analytics" },
-        { name: "Quick Actions", href: "/dashboard/actions" },
-        { name: "Recent Activity", href: "/dashboard/activity" }
-      ]
-    },
-    { 
       name: "Bookings", 
       href: "/bookings", 
       icon: Plane, 
