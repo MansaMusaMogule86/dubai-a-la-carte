@@ -73,6 +73,9 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
                 </div>
               </DropdownMenuContent>
             </DropdownMenu>
+            <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
+            </a>
             {user ? (
               <div className="flex items-center space-x-4">
                 <Button
@@ -138,6 +141,13 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
                   );
                 })}
               </div>
+              <a 
+                href="#pricing" 
+                className="text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Pricing
+              </a>
               {user ? (
                 <>
                   <Button
