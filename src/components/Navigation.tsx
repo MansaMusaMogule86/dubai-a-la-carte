@@ -134,35 +134,13 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {services.map((service) => (
-              service.subCategories ? (
-                <DropdownMenu key={service.name}>
-                  <DropdownMenuTrigger asChild>
-                    <button className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium flex items-center gap-1">
-                      {service.name}
-                      <ChevronDown className="w-3 h-3" />
-                    </button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-48">
-                    {service.subCategories.map((subCategory) => (
-                      <DropdownMenuItem 
-                        key={subCategory.name}
-                        onClick={() => handleServiceClick(subCategory.href)}
-                        className="cursor-pointer"
-                      >
-                        {subCategory.name}
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <button
-                  key={service.name}
-                  onClick={() => handleServiceClick(service.href)}
-                  className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
-                >
-                  {service.name}
-                </button>
-              )
+              <button
+                key={service.name}
+                onClick={() => handleServiceClick(service.href)}
+                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+              >
+                {service.name}
+              </button>
             ))}
             {user ? (
               <div className="flex items-center space-x-4">
