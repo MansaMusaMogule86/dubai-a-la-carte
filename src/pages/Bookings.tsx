@@ -23,6 +23,14 @@ import hotelAlMaha from "@/assets/hotel-al-maha.jpg";
 import hotelArmani from "@/assets/hotel-armani.jpg";
 import hotelRoyalMirage from "@/assets/hotel-royal-mirage.jpg";
 import hotelRitzCarlton from "@/assets/hotel-ritz-carlton.jpg";
+import hotelAddressMarina from "@/assets/hotel-address-marina.jpg";
+import hotelMeridienJBR from "@/assets/hotel-meridien-jbr.jpg";
+import hotelConradBusinessBay from "@/assets/hotel-conrad-business-bay.jpg";
+import hotelMeydan from "@/assets/hotel-meydan.jpg";
+import hotelWaldorfPalm from "@/assets/hotel-waldorf-palm.jpg";
+import hotelMarriottMarquis from "@/assets/hotel-marriott-marquis.jpg";
+import hotelRixosJBR from "@/assets/hotel-rixos-jbr.jpg";
+import hotelShangriLaMarina from "@/assets/hotel-shangri-la-marina.jpg";
 
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
@@ -377,6 +385,101 @@ const Bookings = () => {
       duration: "Per night",
       location: "Al Wadi Desert, RAK",
       rating: 4.7,
+      category: "Hotels"
+    },
+    // Hotels - Marina
+    {
+      id: "address-marina",
+      title: "Address Dubai Marina",
+      description: "Luxury waterfront hotel with yacht harbor views",
+      image: hotelAddressMarina,
+      price: "$1,800",
+      duration: "Per night",
+      location: "Dubai Marina",
+      rating: 4.6,
+      category: "Hotels"
+    },
+    {
+      id: "shangri-la-marina",
+      title: "Shangri-La Hotel Dubai",
+      description: "Marina hotel with yacht club access & fine dining",
+      image: hotelShangriLaMarina,
+      price: "$2,200",
+      duration: "Per night",
+      location: "Dubai Marina",
+      rating: 4.7,
+      category: "Hotels"
+    },
+    // Hotels - JBR (Jumeirah Beach Residence)
+    {
+      id: "meridien-jbr",
+      title: "Le Méridien Mina Seyahi",
+      description: "Beachfront resort with private beach & water sports",
+      image: hotelMeridienJBR,
+      price: "$1,500",
+      duration: "Per night",
+      location: "JBR Beach, Dubai",
+      rating: 4.5,
+      isHotDeal: true,
+      category: "Hotels"
+    },
+    {
+      id: "rixos-jbr",
+      title: "Rixos Premium Dubai JBR",
+      description: "All-inclusive beachfront luxury with ultra-premium service",
+      image: hotelRixosJBR,
+      price: "$2,800",
+      duration: "Per night",
+      location: "JBR Beach, Dubai",
+      rating: 4.6,
+      category: "Hotels"
+    },
+    // Hotels - Business Bay
+    {
+      id: "conrad-business-bay",
+      title: "Conrad Dubai",
+      description: "Business district luxury with city skyline views",
+      image: hotelConradBusinessBay,
+      price: "$1,200",
+      duration: "Per night",
+      location: "Business Bay, Dubai",
+      rating: 4.4,
+      category: "Hotels"
+    },
+    {
+      id: "marriott-marquis",
+      title: "JW Marriott Marquis Dubai",
+      description: "Twin tower luxury hotel with world-class dining",
+      image: hotelMarriottMarquis,
+      price: "$1,400",
+      duration: "Per night",
+      location: "Business Bay, Dubai",
+      rating: 4.5,
+      category: "Hotels"
+    },
+    // Hotels - Meydan
+    {
+      id: "meydan-hotel",
+      title: "The Meydan Hotel",
+      description: "Racecourse luxury hotel with grandstand views",
+      image: hotelMeydan,
+      price: "$1,800",
+      duration: "Per night",
+      location: "Meydan, Dubai",
+      rating: 4.6,
+      isExclusive: true,
+      category: "Hotels"
+    },
+    // Hotels - Palm Jumeirah (Additional)
+    {
+      id: "waldorf-palm",
+      title: "Waldorf Astoria Dubai Palm",
+      description: "Beach resort with private villa accommodations",
+      image: hotelWaldorfPalm,
+      price: "$3,200",
+      duration: "Per night",
+      location: "Palm Jumeirah, Dubai",
+      rating: 4.8,
       category: "Hotels"
     },
     {
