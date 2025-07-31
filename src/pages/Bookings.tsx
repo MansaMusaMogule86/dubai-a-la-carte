@@ -42,7 +42,7 @@ import yachtSportAtlantis from "@/assets/yacht-sport-atlantis.jpg";
 import yachtExplorerCreek from "@/assets/yacht-explorer-creek.jpg";
 import yachtFlybridgeMarina from "@/assets/yacht-flybridge-marina.jpg";
 
-// Import limo images
+// Import luxury car rental images
 import limoRollsRoyce from "@/assets/limo-rolls-royce.jpg";
 import limoMercedesMaybach from "@/assets/limo-mercedes-maybach.jpg";
 import limoBentley from "@/assets/limo-bentley.jpg";
@@ -50,7 +50,14 @@ import limoLamborghini from "@/assets/limo-lamborghini.jpg";
 import limoFerrari from "@/assets/limo-ferrari.jpg";
 import limoRangeRover from "@/assets/limo-range-rover.jpg";
 import limoBMW from "@/assets/limo-bmw.jpg";
-import limoTesla from "@/assets/limo-tesla.jpg";
+import carMercedesG63 from "@/assets/car-mercedes-g63.jpg";
+import carMercedesSClass from "@/assets/car-mercedes-s-class.jpg";
+import carAudiA8L from "@/assets/car-audi-a8l.jpg";
+import carAudiQ8 from "@/assets/car-audi-q8.jpg";
+import carBMWX7 from "@/assets/car-bmw-x7.jpg";
+import carBMW8Series from "@/assets/car-bmw-8-series.jpg";
+import carPorschePanamera from "@/assets/car-porsche-panamera.jpg";
+import carPorscheCayenne from "@/assets/car-porsche-cayenne.jpg";
 
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
@@ -209,7 +216,7 @@ const Bookings = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeTab, setActiveTab] = useState("book");
 
-  const categories = ["All", "Flights", "Hotels", "Yachts", "Limos", "Desert Safari", "Helicopter Rides"];
+  const categories = ["All", "Flights", "Hotels", "Yachts", "Luxury Car Rental", "Desert Safari", "Helicopter Rides"];
 
   const premiumBookings: BookingOption[] = [
     // Emirates Flights
@@ -610,7 +617,7 @@ const Bookings = () => {
       isExclusive: true,
       category: "Yachts"
     },
-    // Limos - Ultra Luxury
+    // Luxury Car Rental - Ultra Luxury
     {
       id: "rolls-royce-phantom",
       title: "Rolls-Royce Phantom",
@@ -621,23 +628,23 @@ const Bookings = () => {
       location: "Dubai Citywide",
       rating: 5.0,
       isExclusive: true,
-      category: "Limos"
+      category: "Luxury Car Rental"
     },
     {
       id: "bentley-mulsanne",
-      title: "Bentley Mulsanne",
-      description: "Handcrafted luxury sedan with bespoke interior",
+      title: "Bentley Mulsanne Speed",
+      description: "Handcrafted luxury sedan with twin-turbo W12 engine",
       image: limoBentley,
       price: "$1,200",
       duration: "6 hours",
       location: "Dubai Premium Areas",
       rating: 4.9,
       isExclusive: true,
-      category: "Limos"
+      category: "Luxury Car Rental"
     },
-    // Limos - Business Class
+    // Mercedes Collection
     {
-      id: "mercedes-maybach",
+      id: "mercedes-maybach-s680",
       title: "Mercedes-Maybach S680",
       description: "Executive luxury sedan with massage seats & champagne service",
       image: limoMercedesMaybach,
@@ -645,67 +652,150 @@ const Bookings = () => {
       duration: "4 hours",
       location: "Business Bay & DIFC",
       rating: 4.8,
-      category: "Limos"
+      category: "Luxury Car Rental"
     },
     {
+      id: "mercedes-g63-amg",
+      title: "Mercedes-AMG G63",
+      description: "High-performance luxury SUV with V8 biturbo engine",
+      image: carMercedesG63,
+      price: "$950",
+      duration: "Full day",
+      location: "City & Desert Routes",
+      rating: 4.7,
+      isHotDeal: true,
+      category: "Luxury Car Rental"
+    },
+    {
+      id: "mercedes-s-class",
+      title: "Mercedes-Benz S-Class",
+      description: "Latest S-Class with autonomous driving & luxury cabin",
+      image: carMercedesSClass,
+      price: "$650",
+      duration: "6 hours",
+      location: "Airport & Business Transfer",
+      rating: 4.6,
+      category: "Luxury Car Rental"
+    },
+    // BMW Collection
+    {
       id: "bmw-7-series",
-      title: "BMW 7 Series Limousine",
-      description: "Premium business sedan with professional chauffeur",
+      title: "BMW 7 Series xDrive",
+      description: "Executive sedan with laser lights & premium audio",
       image: limoBMW,
       price: "$600",
       duration: "4 hours",
       location: "Airport & City Transfer",
       rating: 4.6,
-      category: "Limos"
+      category: "Luxury Car Rental"
     },
-    // Limos - Sports Cars
+    {
+      id: "bmw-x7-m50i",
+      title: "BMW X7 M50i",
+      description: "Full-size luxury SUV with captain's chairs & panoramic roof",
+      image: carBMWX7,
+      price: "$850",
+      duration: "Full day",
+      location: "Family & Group Tours",
+      rating: 4.5,
+      category: "Luxury Car Rental"
+    },
+    {
+      id: "bmw-8-series",
+      title: "BMW 8 Series Gran Coupé",
+      description: "Luxury grand tourer with M performance package",
+      image: carBMW8Series,
+      price: "$1,100",
+      duration: "6 hours",
+      location: "Coastal & Mountain Routes",
+      rating: 4.7,
+      isExclusive: true,
+      category: "Luxury Car Rental"
+    },
+    // Audi Collection
+    {
+      id: "audi-a8l",
+      title: "Audi A8L W12",
+      description: "Long-wheelbase luxury sedan with massage seats & chauffeur",
+      image: carAudiA8L,
+      price: "$750",
+      duration: "8 hours",
+      location: "VIP Business Transfer",
+      rating: 4.6,
+      category: "Luxury Car Rental"
+    },
+    {
+      id: "audi-q8-rsq8",
+      title: "Audi RSQ8",
+      description: "High-performance luxury SUV with sport exhaust & air suspension",
+      image: carAudiQ8,
+      price: "$1,000",
+      duration: "Full day",
+      location: "Performance Driving Routes",
+      rating: 4.8,
+      isHotDeal: true,
+      category: "Luxury Car Rental"
+    },
+    // Porsche Collection
+    {
+      id: "porsche-panamera-turbo",
+      title: "Porsche Panamera Turbo S",
+      description: "Executive sport sedan with 630hp twin-turbo V8",
+      image: carPorschePanamera,
+      price: "$1,300",
+      duration: "6 hours",
+      location: "Highway & Track Experience",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Luxury Car Rental"
+    },
+    {
+      id: "porsche-cayenne-turbo",
+      title: "Porsche Cayenne Turbo",
+      description: "Luxury performance SUV with sport chrono package",
+      image: carPorscheCayenne,
+      price: "$1,150",
+      duration: "Full day",
+      location: "Adventure & City Combined",
+      rating: 4.7,
+      category: "Luxury Car Rental"
+    },
+    // Supercar Collection
     {
       id: "lamborghini-huracan",
-      title: "Lamborghini Huracán",
-      description: "Supercar experience with professional driver",
+      title: "Lamborghini Huracán Performante",
+      description: "Track-focused supercar with active aerodynamics",
       image: limoLamborghini,
       price: "$2,500",
       duration: "4 hours",
-      location: "Dubai Downtown",
+      location: "Dubai Autodrome & Streets",
       rating: 4.7,
       isHotDeal: true,
-      category: "Limos"
+      category: "Luxury Car Rental"
     },
     {
-      id: "ferrari-488",
+      id: "ferrari-488-gtb",
       title: "Ferrari 488 GTB",
-      description: "Italian supercar rental with VIP service",
+      description: "Italian mid-engine supercar with 661hp twin-turbo V8",
       image: limoFerrari,
       price: "$3,200",
       duration: "6 hours",
-      location: "Palm Jumeirah Route",
+      location: "Scenic Coastal Routes",
       rating: 4.8,
       isExclusive: true,
-      category: "Limos"
+      category: "Luxury Car Rental"
     },
-    // Limos - SUV Luxury
+    // Luxury SUV Collection
     {
       id: "range-rover-autobiography",
       title: "Range Rover Autobiography",
-      description: "Luxury SUV perfect for desert excursions & city tours",
+      description: "Ultimate luxury SUV with terrain response & premium cabin",
       image: limoRangeRover,
       price: "$900",
       duration: "Full day",
-      location: "Desert & City Combined",
+      location: "Desert Safari & City Tours",
       rating: 4.7,
-      category: "Limos"
-    },
-    // Limos - Eco Luxury
-    {
-      id: "tesla-model-s",
-      title: "Tesla Model S Plaid",
-      description: "Sustainable luxury with cutting-edge technology",
-      image: limoTesla,
-      price: "$700",
-      duration: "6 hours",
-      location: "Smart City Tours",
-      rating: 4.5,
-      category: "Limos"
+      category: "Luxury Car Rental"
     },
     {
       id: "6",
