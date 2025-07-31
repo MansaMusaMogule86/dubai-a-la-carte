@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState, lazy, Suspense } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
@@ -25,8 +26,25 @@ interface BookingOption {
   category: string;
 }
 
-const PremiumBookingCard = ({ booking }: { booking: BookingOption }) => (
-  <Card className="overflow-hidden hover:shadow-luxury hover:scale-105 transition-all duration-300 group cursor-pointer">
+const PremiumBookingCard = ({ booking }: { booking: BookingOption }) => {
+  const { toast } = useToast();
+
+  const handleAddToItinerary = () => {
+    toast({
+      title: "Added to Itinerary",
+      description: `${booking.title} has been added to your itinerary.`,
+    });
+  };
+
+  const handleBookNow = () => {
+    toast({
+      title: "Booking Initiated",
+      description: `Redirecting to booking confirmation for ${booking.title}...`,
+    });
+  };
+
+  return (
+    <Card className="overflow-hidden hover:shadow-luxury hover:scale-105 transition-all duration-300 group cursor-pointer">
     <div className="relative h-48 bg-gradient-to-br from-gold/20 to-primary/20">
       <div className="absolute inset-0 bg-black/20" />
       <div className="absolute top-4 left-4 flex gap-2">
@@ -86,6 +104,7 @@ const PremiumBookingCard = ({ booking }: { booking: BookingOption }) => (
             size="sm" 
             className="text-xs"
             disabled={booking.isFullyBooked}
+            onClick={handleAddToItinerary}
           >
             Add to Itinerary
           </Button>
@@ -93,6 +112,7 @@ const PremiumBookingCard = ({ booking }: { booking: BookingOption }) => (
             size="sm" 
             className="text-xs"
             disabled={booking.isFullyBooked}
+            onClick={handleBookNow}
           >
             Book Now
           </Button>
@@ -100,7 +120,8 @@ const PremiumBookingCard = ({ booking }: { booking: BookingOption }) => (
       </div>
     </CardContent>
   </Card>
-);
+  );
+};
 
 const CategoryFilter = ({ 
   categories, 
