@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MessageSquare, Send, X, Minimize2, Home } from "lucide-react";
+import { MessageSquare, Send, X, Minimize2, Home, Building2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface Message {
@@ -20,6 +20,7 @@ interface ServiceChatbotProps {
   systemPrompt: string;
   welcomeMessage: string;
   position?: 'right' | 'left';
+  icon?: 'home' | 'building' | 'default';
 }
 
 export const ServiceChatbot = ({ 
@@ -28,7 +29,8 @@ export const ServiceChatbot = ({
   botColor, 
   systemPrompt,
   welcomeMessage,
-  position = 'right'
+  position = 'right',
+  icon = 'default'
 }: ServiceChatbotProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -98,6 +100,17 @@ export const ServiceChatbot = ({
   };
 
   const positionClass = position === 'right' ? 'right-6' : 'left-6';
+  
+  const getIcon = () => {
+    switch (icon) {
+      case 'home':
+        return <Home className="w-6 h-6 text-white" />;
+      case 'building':
+        return <Building2 className="w-6 h-6 text-white" />;
+      default:
+        return <Home className="w-6 h-6 text-white" />;
+    }
+  };
 
   if (!isOpen) {
     return (
@@ -107,7 +120,7 @@ export const ServiceChatbot = ({
           className="w-14 h-14 rounded-full shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-105"
           style={{ backgroundColor: botColor }}
         >
-          <Home className="w-6 h-6 text-white" />
+          {getIcon()}
         </Button>
       </div>
     );
