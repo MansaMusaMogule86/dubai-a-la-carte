@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MessageSquare, Send, X, Minimize2, Bot } from "lucide-react";
+import { MessageSquare, Send, X, Minimize2, Home } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface Message {
@@ -28,7 +28,7 @@ export const ServiceChatbot = ({
   botColor, 
   systemPrompt,
   welcomeMessage,
-  position = 'left'
+  position = 'right'
 }: ServiceChatbotProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -107,7 +107,7 @@ export const ServiceChatbot = ({
           className="w-14 h-14 rounded-full shadow-luxury hover:shadow-glow transition-all duration-300 hover:scale-105"
           style={{ backgroundColor: botColor }}
         >
-          <Bot className="w-6 h-6 text-white" />
+          <Home className="w-6 h-6 text-white" />
         </Button>
       </div>
     );
