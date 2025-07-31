@@ -392,6 +392,68 @@ const VIP = () => {
                   </Button>
                 </div>
               </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueUrla} 
+                    alt="Urla Dubai"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Urla</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      DIFC
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Mediterranean fine dining</span> with <span className="text-gold">stunning Burj Khalifa views</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Mediterranean</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Fine Dining</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Burj Views</span>
+                  </div>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={venueBarDesPres} 
+                    alt="Bar des Pres Dubai"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Bar des Prés</h3>
+                    <div className="flex items-center text-xs text-muted-foreground">
+                      <MapPin className="w-3 h-3 mr-1" />
+                      DIFC
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">French-Japanese fusion</span> with <span className="text-gold">elegant gastronomic journey</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">French-Japanese</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Fusion Cuisine</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Burj Views</span>
+                  </div>
+                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
+                    <Phone className="w-3 h-3 mr-1" />
+                    Reserve
+                  </Button>
+                </div>
+              </Card>
             </div>
           </Card>
 
@@ -448,73 +510,6 @@ const VIP = () => {
                   </div>
                 </Card>
               ))}
-            </div>
-          </Card>
-
-          {/* Premium Fine Dining Venues */}
-          <Card className="mb-12 overflow-hidden">
-            <div className="bg-gradient-to-r from-gold/10 to-gold/5 p-6 border-b border-gold/20">
-              <h2 className="text-2xl font-bold text-center">Exclusive Fine Dining Experiences</h2>
-              <p className="text-center text-muted-foreground mt-2">Discover Dubai's premier gourmet destinations</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={venueUrla} 
-                    alt="Urla Dubai"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Urla (Burj View)</h3>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      DIFC
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">Mediterranean fine dining with stunning Burj Khalifa views and refined culinary excellence</p>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    <span className="text-xs bg-gold/10 text-gold px-2 py-1 rounded-full">Burj Views</span>
-                    <span className="text-xs bg-gold/10 text-gold px-2 py-1 rounded-full">Mediterranean</span>
-                    <span className="text-xs bg-gold/10 text-gold px-2 py-1 rounded-full">Fine Dining</span>
-                  </div>
-                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                    <Phone className="w-3 h-3 mr-1" />
-                    Reserve
-                  </Button>
-                </div>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={venueBarDesPres} 
-                    alt="Bar des Pres Dubai"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Bar des Pres (Burj View)</h3>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      DIFC
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">French-Japanese fusion cuisine with Burj Khalifa views, offering an elegant gastronomic journey</p>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    <span className="text-xs bg-gold/10 text-gold px-2 py-1 rounded-full">French-Japanese</span>
-                    <span className="text-xs bg-gold/10 text-gold px-2 py-1 rounded-full">Burj Views</span>
-                    <span className="text-xs bg-gold/10 text-gold px-2 py-1 rounded-full">Fusion Cuisine</span>
-                  </div>
-                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                    <Phone className="w-3 h-3 mr-1" />
-                    Reserve
-                  </Button>
-                </div>
-              </Card>
             </div>
           </Card>
 
