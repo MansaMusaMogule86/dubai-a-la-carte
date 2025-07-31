@@ -161,7 +161,14 @@ const VIP = () => {
                       Four Seasons Resort Dubai
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Premium steakhouse with panoramic Marina views</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Premium steakhouse</span> with <span className="text-gold">panoramic Marina views</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">American Steakhouse</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Premium Cuts</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Marina Views</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
@@ -185,7 +192,14 @@ const VIP = () => {
                       Fairmont Dubai
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Luxurious dining and entertainment venue</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Luxurious dining</span> and <span className="text-gold">entertainment venue</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Italian Fusion</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Live Entertainment</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Fashion Forward</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
@@ -209,7 +223,14 @@ const VIP = () => {
                       Meydan Racecourse
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Iconic rooftop club with world-class DJs</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Iconic rooftop club</span> with <span className="text-gold">world-class DJs</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">EDM Club</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Rooftop Terrace</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">International DJs</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
@@ -233,7 +254,14 @@ const VIP = () => {
                       Burj Al Arab Jumeirah
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Hidden speakeasy at Burj Al Arab</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Hidden speakeasy</span> at <span className="text-gold">Burj Al Arab</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Speakeasy</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Craft Cocktails</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Ultra Exclusive</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
@@ -257,7 +285,14 @@ const VIP = () => {
                       Armani Hotel Dubai
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Ultra-exclusive nightclub in Burj Khalifa</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Ultra-exclusive nightclub</span> in <span className="text-gold">Burj Khalifa</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Designer Club</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">High Fashion</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">VIP Experience</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
@@ -281,7 +316,14 @@ const VIP = () => {
                       Four Points by Sheraton
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Sky-high nightclub with stunning city views</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Sky-high nightclub</span> with <span className="text-gold">stunning city views</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Rooftop Club</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">City Views</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Modern Nightlife</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
@@ -305,7 +347,14 @@ const VIP = () => {
                       Fairmont Dubai
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Theatrical circus-themed nightclub experience</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Theatrical circus-themed</span> <span className="text-gold">nightclub experience</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Circus Theme</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Live Performances</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Theatrical</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
@@ -329,7 +378,14 @@ const VIP = () => {
                       Atlantis The Palm
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">Beachfront luxury club and restaurant</p>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <span className="text-gold font-medium">Beachfront luxury club</span> and <span className="text-gold">restaurant</span>
+                  </p>
+                  <div className="mb-4">
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Beach Club</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Mediterranean</span>
+                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Ocean Views</span>
+                  </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
                     Reserve
