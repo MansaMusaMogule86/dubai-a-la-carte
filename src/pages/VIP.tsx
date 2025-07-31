@@ -1,5 +1,4 @@
-import { Navigation } from "@/components/Navigation";
-import { useAuth } from "@/hooks/useAuth";
+import { Layout } from "@/components/Layout";
 import { Crown, Sparkles, Calendar, Star, MapPin, Phone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,6 @@ import venueUrla from "@/assets/venue-urla.jpg";
 import venueBarDesPres from "@/assets/venue-bar-des-pres.jpg";
 
 const VIP = () => {
-  const { user, signOut } = useAuth();
 
   const premiumVenues = [
     {
@@ -80,8 +78,7 @@ const VIP = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation user={user} onLogout={signOut} />
+    <Layout>
       <div className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -441,7 +438,7 @@ const VIP = () => {
         welcomeMessage="Welcome! I'm Sofia, your personal VIP concierge. I specialize in Dubai's most exclusive dining experiences and luxury services. How may I assist you in creating an unforgettable experience today?"
         position="right"
       />
-    </div>
+    </Layout>
   );
 };
 
