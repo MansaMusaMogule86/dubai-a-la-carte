@@ -32,11 +32,16 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
       icon: Plane, 
       description: "View & manage flights/hotels/limo bookings",
       subCategories: [
-        { name: "All Bookings", href: "/bookings" },
+        { name: "All", href: "/bookings" },
         { name: "Flights", href: "/bookings/flights" },
         { name: "Hotels", href: "/bookings/hotels" },
-        { name: "Limos & Cars", href: "/bookings/limos" },
-        { name: "Yachts", href: "/bookings/yachts" }
+        { name: "Yachts", href: "/bookings/yachts" },
+        { name: "Luxury Car Rental", href: "/bookings/luxury-car-rental" },
+        { name: "Desert Safari", href: "/bookings/desert-safari" },
+        { name: "Helicopter Rides", href: "/bookings/helicopter-rides" },
+        { name: "Adrenaline & Sky Adventures", href: "/bookings/adrenaline-sky" },
+        { name: "Fun & Gaming", href: "/bookings/fun-gaming" },
+        { name: "Jet Ski & Flyboard", href: "/bookings/jet-ski-flyboard" }
       ]
     },
     { 
