@@ -85,12 +85,30 @@ const VIP = () => {
       <div className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 rounded-full mb-6">
+              <Crown className="w-8 h-8 text-gold" />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              VIP Lounge Access Dubai – <span className="text-gold">Exclusive Events & Premium Venues 2025</span>
+              Dubai's Most <span className="text-gold">Exclusive Clubs & Lounges</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Secure your VIP Lounge Access in Dubai 2025—exclusive tables, private events, and premium nightlife with instant booking and red-carpet treatment.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              Experience the pinnacle of Dubai's nightlife scene with exclusive access to the city's most prestigious venues, 
+              private tables, and red-carpet treatment at every location.
             </p>
+            <div className="flex flex-wrap justify-center gap-3 text-sm">
+              <div className="flex items-center gap-2 bg-gold/10 px-4 py-2 rounded-full">
+                <Sparkles className="w-4 h-4 text-gold" />
+                <span>VIP Table Service</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gold/10 px-4 py-2 rounded-full">
+                <Star className="w-4 h-4 text-gold" />
+                <span>Premium Bottle Service</span>
+              </div>
+              <div className="flex items-center gap-2 bg-gold/10 px-4 py-2 rounded-full">
+                <Calendar className="w-4 h-4 text-gold" />
+                <span>Instant Reservations</span>
+              </div>
+            </div>
           </div>
 
           {/* Premium Dubai Clubs & Lounges */}
