@@ -14,7 +14,18 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
   const navigate = useNavigate();
 
   const services = [
-    { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard, description: "Welcome client, request input, quick actions" },
+    { 
+      name: "Dashboard", 
+      href: "/dashboard", 
+      icon: LayoutDashboard, 
+      description: "Welcome client, request input, quick actions",
+      subCategories: [
+        { name: "Overview", href: "/dashboard" },
+        { name: "Analytics", href: "/dashboard/analytics" },
+        { name: "Quick Actions", href: "/dashboard/actions" },
+        { name: "Recent Activity", href: "/dashboard/activity" }
+      ]
+    },
     { name: "Bookings", href: "/bookings", icon: Plane, description: "View & manage flights/hotels/limo bookings" },
     { name: "Real Estate", href: "/real-estate", icon: Home, description: "View luxury listings + book agent" },
     { name: "Business Setup", href: "/business", icon: Building2, description: "Start new company, submit documents" },
@@ -46,13 +57,35 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {services.map((service) => (
-              <button
-                key={service.name}
-                onClick={() => handleServiceClick(service.href)}
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
-              >
-                {service.name}
-              </button>
+              service.subCategories ? (
+                <DropdownMenu key={service.name}>
+                  <DropdownMenuTrigger asChild>
+                    <button className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium flex items-center gap-1">
+                      {service.name}
+                      <ChevronDown className="w-3 h-3" />
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-48">
+                    {service.subCategories.map((subCategory) => (
+                      <DropdownMenuItem 
+                        key={subCategory.name}
+                        onClick={() => handleServiceClick(subCategory.href)}
+                        className="cursor-pointer"
+                      >
+                        {subCategory.name}
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <button
+                  key={service.name}
+                  onClick={() => handleServiceClick(service.href)}
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+                >
+                  {service.name}
+                </button>
+              )
             ))}
             {user ? (
               <div className="flex items-center space-x-4">
