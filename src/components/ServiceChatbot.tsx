@@ -28,7 +28,7 @@ export const ServiceChatbot = ({
   botColor, 
   systemPrompt,
   welcomeMessage,
-  position = 'right'
+  position = 'left'
 }: ServiceChatbotProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
