@@ -79,6 +79,11 @@ import skydivingDesertDrop from "@/assets/skydiving-desert-drop.jpg";
 import ziplineDubaiMarina from "@/assets/zipline-dubai-marina.jpg";
 import skyViewsObservatory from "@/assets/sky-views-observatory.jpg";
 
+// Import BattleKart images
+import battlekartArGaming from "@/assets/battlekart-ar-gaming.jpg";
+import battlekartSplatoonMode from "@/assets/battlekart-splatoon-mode.jpg";
+import battlekartMarioKart from "@/assets/battlekart-mario-kart.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -976,7 +981,7 @@ const Bookings = () => {
       id: "battlekart-first-game",
       title: "BattleKart AR Go-Karting - 1st Game",
       description: "Snake • Mario Kart • Splatoon modes - Real track + video game combo",
-      image: helicopterS76dLuxury, // Placeholder image
+      image: battlekartArGaming,
       price: "AED 200",
       duration: "30 minutes",
       location: "BattleKart Dubai",
@@ -988,7 +993,7 @@ const Bookings = () => {
       id: "battlekart-second-game",
       title: "BattleKart AR Go-Karting - 2nd Game",
       description: "Augmented reality karting with real-time scoring & AR effects",
-      image: helicopterH155Vip, // Placeholder image
+      image: battlekartMarioKart,
       price: "AED 170",
       duration: "30 minutes",
       location: "BattleKart Dubai",
@@ -999,7 +1004,7 @@ const Bookings = () => {
       id: "battlekart-additional",
       title: "BattleKart AR Go-Karting - Additional Race",
       description: "One-of-a-kind virtual karting experience with multiple game modes",
-      image: helicopterBell429, // Placeholder image
+      image: battlekartSplatoonMode,
       price: "AED 130",
       duration: "30 minutes",
       location: "BattleKart Dubai",
