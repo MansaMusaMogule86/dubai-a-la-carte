@@ -122,7 +122,7 @@ export default function Dashboard() {
     }
   ];
 
-  const userName = user.user_metadata?.full_name || user.email?.split('@')[0] || 'Guest';
+  const userName = user.user_metadata?.full_name || user.user_metadata?.name || user.email?.split('@')[0] || 'Valued Guest';
   const currentHour = new Date().getHours();
   const greeting = currentHour < 12 ? 'Good morning' : currentHour < 18 ? 'Good afternoon' : 'Good evening';
 
@@ -184,13 +184,18 @@ export default function Dashboard() {
       <div className="border-b border-border bg-card/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <div>
+            <div className="space-y-2">
               <h1 className="text-3xl font-bold bg-gradient-to-r from-gold to-gold/70 bg-clip-text text-transparent">
                 Dubai À La Carte
               </h1>
-              <p className="text-lg text-muted-foreground mt-1">
-                {greeting}, <span className="text-gold font-medium">{userName}</span>
-              </p>
+              <div className="space-y-1">
+                <p className="text-2xl font-semibold">
+                  Welcome back, <span className="text-gold">{userName}</span>
+                </p>
+                <p className="text-base text-muted-foreground">
+                  {greeting}! Ready for another extraordinary day?
+                </p>
+              </div>
             </div>
             <div className="flex items-center space-x-3">
               <Button 
