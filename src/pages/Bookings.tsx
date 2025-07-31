@@ -84,6 +84,14 @@ import battlekartArGaming from "@/assets/battlekart-ar-gaming.jpg";
 import battlekartSplatoonMode from "@/assets/battlekart-splatoon-mode.jpg";
 import battlekartMarioKart from "@/assets/battlekart-mario-kart.jpg";
 
+// Import jet ski & flyboard images
+import jetskiBurjAlArab from "@/assets/jetski-burj-al-arab.jpg";
+import jetskiAtlantisRoyal from "@/assets/jetski-atlantis-royal.jpg";
+import jetskiPalmJumeirahLoop from "@/assets/jetski-palm-jumeirah-loop.jpg";
+import jetskiDubaiCoastline from "@/assets/jetski-dubai-coastline.jpg";
+import jetskiFlyboardCombo from "@/assets/jetski-flyboard-combo.jpg";
+import flyboardSoloSession from "@/assets/flyboard-solo-session.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -1016,7 +1024,7 @@ const Bookings = () => {
       id: "jetski-burj-al-arab",
       title: "Jet Ski Tour - Burj Al Arab",
       description: "30-minute guided jet ski tour around iconic Burj Al Arab",
-      image: yachtSportAtlantis,
+      image: jetskiBurjAlArab,
       price: "AED 350",
       duration: "30 minutes",
       location: "Burj Al Arab Waters",
@@ -1027,7 +1035,7 @@ const Bookings = () => {
       id: "jetski-atlantis-royal",
       title: "Jet Ski Tour - Atlantis, The Royal",
       description: "1-hour premium jet ski experience around Atlantis resort",
-      image: yachtCatamaranPalm,
+      image: jetskiAtlantisRoyal,
       price: "AED 600",
       duration: "60 minutes",
       location: "Atlantis, The Royal",
@@ -1038,7 +1046,7 @@ const Bookings = () => {
       id: "jetski-palm-loop",
       title: "Palm Jumeirah Loop Jet Ski",
       description: "90-minute comprehensive tour around entire Palm Jumeirah",
-      image: yachtMotorMarina,
+      image: jetskiPalmJumeirahLoop,
       price: "AED 770",
       duration: "90 minutes",
       location: "Palm Jumeirah",
@@ -1050,7 +1058,7 @@ const Bookings = () => {
       id: "jetski-coastline",
       title: "Explore Dubai Coastline",
       description: "2-hour extensive jet ski tour exploring Dubai's full coastline",
-      image: yachtFlybridgeMarina,
+      image: jetskiDubaiCoastline,
       price: "AED 930",
       duration: "2 hours",
       location: "Dubai Coastline",
@@ -1062,7 +1070,7 @@ const Bookings = () => {
       id: "combo-jetski-flyboard-30",
       title: "Combo: 30min Jet Ski + 30min Flyboard",
       description: "Perfect combination of jet skiing and flyboarding experiences",
-      image: yachtSailingCoast,
+      image: jetskiFlyboardCombo,
       price: "AED 650",
       duration: "1 hour",
       location: "Dubai Marina",
@@ -1073,7 +1081,7 @@ const Bookings = () => {
       id: "combo-jetski-flyboard-60",
       title: "Combo: 1hr Jet Ski + 30min Flyboard",
       description: "Extended jet ski session combined with flyboard adventure",
-      image: yachtExplorerCreek,
+      image: jetskiFlyboardCombo,
       price: "AED 850",
       duration: "1.5 hours",
       location: "Dubai Marina",
@@ -1085,7 +1093,7 @@ const Bookings = () => {
       id: "flyboard-solo",
       title: "Flyboard Solo Session",
       description: "30-minute flyboarding experience with professional instruction",
-      image: yachtSuperyachtBurj,
+      image: flyboardSoloSession,
       price: "AED 380",
       duration: "30 minutes",
       location: "Dubai Marina",
