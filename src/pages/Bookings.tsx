@@ -59,6 +59,13 @@ import carBMW8Series from "@/assets/car-bmw-8-series.jpg";
 import carPorschePanamera from "@/assets/car-porsche-panamera.jpg";
 import carPorscheCayenne from "@/assets/car-porsche-cayenne.jpg";
 
+// Import desert safari images
+import desertPlatinumCamp from "@/assets/desert-platinum-camp.jpg";
+import desertRoyalRetreat from "@/assets/desert-royal-retreat.jpg";
+import desertVipOasis from "@/assets/desert-vip-oasis.jpg";
+import desertUltimateSafari from "@/assets/desert-ultimate-safari.jpg";
+import desertAristocratMansion from "@/assets/desert-aristocrat-mansion.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -509,16 +516,63 @@ const Bookings = () => {
       rating: 4.8,
       category: "Hotels"
     },
+    // Desert Safari - Aristocratic Experiences
     {
-      id: "3",
-      title: "Platinum Desert Safari",
-      description: "Private camp with falcon show & gourmet dinner",
-      image: "desert-safari",
-      price: "$1,200",
-      duration: "6 hours",
-      location: "Al Marmoom Desert",
-      rating: 4.8,
+      id: "desert-aristocrat-mansion",
+      title: "Royal Desert Mansion",
+      description: "Private desert estate with 5 bedrooms, infinity pool, dedicated chef & BBQ pavilion",
+      image: desertAristocratMansion,
+      price: "$15,000",
+      duration: "24 hours",
+      location: "Private Desert Reserve",
+      rating: 5.0,
       isExclusive: true,
+      category: "Desert Safari"
+    },
+    {
+      id: "desert-royal-retreat",
+      title: "Emirates Royal Retreat",
+      description: "Exclusive royal villa with private pool, falcon show & gourmet BBQ experience",
+      image: desertRoyalRetreat,
+      price: "$8,500",
+      duration: "12 hours",
+      location: "Al Marmoom Royal Reserve",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Desert Safari"
+    },
+    {
+      id: "desert-vip-oasis",
+      title: "VIP Desert Oasis",
+      description: "Private camp with luxury tents, swimming pool, BBQ station & butler service",
+      image: desertVipOasis,
+      price: "$4,200",
+      duration: "8 hours",
+      location: "Dubai Desert Conservation",
+      rating: 4.8,
+      category: "Desert Safari"
+    },
+    {
+      id: "desert-platinum-camp",
+      title: "Platinum Private Camp",
+      description: "Exclusive Bedouin camp with pool, private rooms & chef-prepared BBQ",
+      image: desertPlatinumCamp,
+      price: "$2,800",
+      duration: "6 hours",
+      location: "Lehbab Desert",
+      rating: 4.7,
+      isHotDeal: true,
+      category: "Desert Safari"
+    },
+    {
+      id: "desert-ultimate-safari",
+      title: "Ultimate Safari Experience",
+      description: "Multi-room pavilion with private pool, outdoor kitchen & entertainment area",
+      image: desertUltimateSafari,
+      price: "$3,500",
+      duration: "10 hours",
+      location: "Fossil Rock Desert",
+      rating: 4.8,
       category: "Desert Safari"
     },
     // Yachts - Superyachts (150ft+)
