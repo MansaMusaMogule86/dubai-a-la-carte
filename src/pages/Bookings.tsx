@@ -230,7 +230,7 @@ const Bookings = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [activeTab, setActiveTab] = useState("book");
 
-  const categories = ["All", "Flights", "Hotels", "Yachts", "Luxury Car Rental", "Desert Safari", "Helicopter Rides"];
+  const categories = ["All", "Flights", "Hotels", "Yachts", "Luxury Car Rental", "Desert Safari", "Helicopter Rides", "Adrenaline & Sky Adventures", "Fun & Gaming", "Jet Ski & Flyboard"];
 
   const premiumBookings: BookingOption[] = [
     // Emirates Flights
@@ -917,6 +917,169 @@ const Bookings = () => {
       location: "Burj Al Arab & Coast",
       rating: 4.7,
       category: "Helicopter Rides"
+    },
+    // Adrenaline & Sky Adventures
+    {
+      id: "skydiving-palm-jumeirah",
+      title: "Palm Jumeirah Tandem Jump",
+      description: "Professional instructor, full gear, HD video & photos included",
+      image: helicopterH155Vip, // Placeholder image
+      price: "AED 2,499",
+      duration: "4 hours",
+      location: "Palm Jumeirah Drop Zone",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Adrenaline & Sky Adventures"
+    },
+    {
+      id: "skydiving-desert",
+      title: "Desert Drop Zone Skydiving",
+      description: "Desert tandem skydiving with professional instructor & full equipment",
+      image: helicopterBell429, // Placeholder image
+      price: "AED 2,099",
+      duration: "3 hours",
+      location: "Desert Drop Zone",
+      rating: 4.8,
+      isHotDeal: true,
+      category: "Adrenaline & Sky Adventures"
+    },
+    {
+      id: "xline-zipline",
+      title: "Dubai Marina XLine Zipline",
+      description: "High-speed zipline up to 80 km/h with GoPro footage included",
+      image: helicopterEc135Panoramic, // Placeholder image
+      price: "AED 699",
+      duration: "2 hours",
+      location: "Dubai Marina",
+      rating: 4.7,
+      category: "Adrenaline & Sky Adventures"
+    },
+    {
+      id: "sky-views-observatory",
+      title: "Sky Views Edge Walk & Glass Slide",
+      description: "Walk on sky bridge at 219 meters above ground with glass slide experience",
+      image: helicopterAw139Vip, // Placeholder image
+      price: "AED 70",
+      duration: "1.5 hours",
+      location: "Downtown Dubai",
+      rating: 4.5,
+      category: "Adrenaline & Sky Adventures"
+    },
+    // Fun & Gaming
+    {
+      id: "battlekart-first-game",
+      title: "BattleKart AR Go-Karting - 1st Game",
+      description: "Snake • Mario Kart • Splatoon modes - Real track + video game combo",
+      image: helicopterS76dLuxury, // Placeholder image
+      price: "AED 200",
+      duration: "30 minutes",
+      location: "BattleKart Dubai",
+      rating: 4.8,
+      isHotDeal: true,
+      category: "Fun & Gaming"
+    },
+    {
+      id: "battlekart-second-game",
+      title: "BattleKart AR Go-Karting - 2nd Game",
+      description: "Augmented reality karting with real-time scoring & AR effects",
+      image: helicopterH155Vip, // Placeholder image
+      price: "AED 170",
+      duration: "30 minutes",
+      location: "BattleKart Dubai",
+      rating: 4.8,
+      category: "Fun & Gaming"
+    },
+    {
+      id: "battlekart-additional",
+      title: "BattleKart AR Go-Karting - Additional Race",
+      description: "One-of-a-kind virtual karting experience with multiple game modes",
+      image: helicopterBell429, // Placeholder image
+      price: "AED 130",
+      duration: "30 minutes",
+      location: "BattleKart Dubai",
+      rating: 4.8,
+      category: "Fun & Gaming"
+    },
+    // Jet Ski & Flyboard Experiences
+    {
+      id: "jetski-burj-al-arab",
+      title: "Jet Ski Tour - Burj Al Arab",
+      description: "30-minute guided jet ski tour around iconic Burj Al Arab",
+      image: yachtSportAtlantis,
+      price: "AED 350",
+      duration: "30 minutes",
+      location: "Burj Al Arab Waters",
+      rating: 4.6,
+      category: "Jet Ski & Flyboard"
+    },
+    {
+      id: "jetski-atlantis-royal",
+      title: "Jet Ski Tour - Atlantis, The Royal",
+      description: "1-hour premium jet ski experience around Atlantis resort",
+      image: yachtCatamaranPalm,
+      price: "AED 600",
+      duration: "60 minutes",
+      location: "Atlantis, The Royal",
+      rating: 4.7,
+      category: "Jet Ski & Flyboard"
+    },
+    {
+      id: "jetski-palm-loop",
+      title: "Palm Jumeirah Loop Jet Ski",
+      description: "90-minute comprehensive tour around entire Palm Jumeirah",
+      image: yachtMotorMarina,
+      price: "AED 770",
+      duration: "90 minutes",
+      location: "Palm Jumeirah",
+      rating: 4.8,
+      isHotDeal: true,
+      category: "Jet Ski & Flyboard"
+    },
+    {
+      id: "jetski-coastline",
+      title: "Explore Dubai Coastline",
+      description: "2-hour extensive jet ski tour exploring Dubai's full coastline",
+      image: yachtFlybridgeMarina,
+      price: "AED 930",
+      duration: "2 hours",
+      location: "Dubai Coastline",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Jet Ski & Flyboard"
+    },
+    {
+      id: "combo-jetski-flyboard-30",
+      title: "Combo: 30min Jet Ski + 30min Flyboard",
+      description: "Perfect combination of jet skiing and flyboarding experiences",
+      image: yachtSailingCoast,
+      price: "AED 650",
+      duration: "1 hour",
+      location: "Dubai Marina",
+      rating: 4.8,
+      category: "Jet Ski & Flyboard"
+    },
+    {
+      id: "combo-jetski-flyboard-60",
+      title: "Combo: 1hr Jet Ski + 30min Flyboard",
+      description: "Extended jet ski session combined with flyboard adventure",
+      image: yachtExplorerCreek,
+      price: "AED 850",
+      duration: "1.5 hours",
+      location: "Dubai Marina",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Jet Ski & Flyboard"
+    },
+    {
+      id: "flyboard-solo",
+      title: "Flyboard Solo Session",
+      description: "30-minute flyboarding experience with professional instruction",
+      image: yachtSuperyachtBurj,
+      price: "AED 380",
+      duration: "30 minutes",
+      location: "Dubai Marina",
+      rating: 4.6,
+      category: "Jet Ski & Flyboard"
     }
   ];
 
