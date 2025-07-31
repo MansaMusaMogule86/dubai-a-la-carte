@@ -26,7 +26,19 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
         { name: "Recent Activity", href: "/dashboard/activity" }
       ]
     },
-    { name: "Bookings", href: "/bookings", icon: Plane, description: "View & manage flights/hotels/limo bookings" },
+    { 
+      name: "Bookings", 
+      href: "/bookings", 
+      icon: Plane, 
+      description: "View & manage flights/hotels/limo bookings",
+      subCategories: [
+        { name: "All Bookings", href: "/bookings" },
+        { name: "Flights", href: "/bookings/flights" },
+        { name: "Hotels", href: "/bookings/hotels" },
+        { name: "Limos & Cars", href: "/bookings/limos" },
+        { name: "Yachts", href: "/bookings/yachts" }
+      ]
+    },
     { name: "Real Estate", href: "/real-estate", icon: Home, description: "View luxury listings + book agent" },
     { name: "Business Setup", href: "/business", icon: Building2, description: "Start new company, submit documents" },
     { name: "Schooling", href: "/schooling", icon: GraduationCap, description: "Enroll child, compare options" },
