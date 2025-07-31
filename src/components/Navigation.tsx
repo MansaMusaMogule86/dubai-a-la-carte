@@ -85,7 +85,7 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
       ]
     },
     { 
-      name: "Dashboard", 
+      name: "My Profile", 
       href: "/profile", 
       icon: User, 
       description: "Manage info, upload passport, pay invoices",
@@ -120,7 +120,7 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-6">
             {services.map((service) => (
               <button
                 key={service.name}
@@ -131,7 +131,7 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
               </button>
             ))}
             {user ? (
-              <div className="flex items-center space-x-3 ml-6">
+              <div className="flex items-center space-x-4">
                 <Button
                   variant="ghost"
                   onClick={() => navigate("/dashboard")}
@@ -150,7 +150,7 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
                 </Button>
               </div>
             ) : (
-              <div className="flex items-center space-x-3 ml-6">
+              <div className="flex items-center space-x-4">
                 <Button variant="ghost" onClick={() => navigate("/auth")}>
                   Sign In
                 </Button>
@@ -160,6 +160,7 @@ export const Navigation = ({ user, onLogout }: NavigationProps) => {
               </div>
             )}
           </div>
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
