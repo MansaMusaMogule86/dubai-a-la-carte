@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { MessageSquare, Send, X, Minimize2, Home, Building2 } from "lucide-react";
+import { MessageSquare, Send, X, Minimize2, Home, Building2, GraduationCap } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 interface Message {
@@ -20,7 +20,7 @@ interface ServiceChatbotProps {
   systemPrompt: string;
   welcomeMessage: string;
   position?: 'right' | 'left';
-  icon?: 'home' | 'building' | 'default';
+  icon?: 'home' | 'building' | 'school' | 'default';
 }
 
 export const ServiceChatbot = ({ 
@@ -107,6 +107,8 @@ export const ServiceChatbot = ({
         return <Home className="w-6 h-6 text-white" />;
       case 'building':
         return <Building2 className="w-6 h-6 text-white" />;
+      case 'school':
+        return <GraduationCap className="w-6 h-6 text-white" />;
       default:
         return <Home className="w-6 h-6 text-white" />;
     }
