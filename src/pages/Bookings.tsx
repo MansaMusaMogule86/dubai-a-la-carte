@@ -66,6 +66,13 @@ import desertVipOasis from "@/assets/desert-vip-oasis.jpg";
 import desertUltimateSafari from "@/assets/desert-ultimate-safari.jpg";
 import desertAristocratMansion from "@/assets/desert-aristocrat-mansion.jpg";
 
+// Import helicopter images
+import helicopterH155Vip from "@/assets/helicopter-h155-vip.jpg";
+import helicopterBell429 from "@/assets/helicopter-bell-429.jpg";
+import helicopterAw139Vip from "@/assets/helicopter-aw139-vip.jpg";
+import helicopterS76dLuxury from "@/assets/helicopter-s76d-luxury.jpg";
+import helicopterEc135Panoramic from "@/assets/helicopter-ec135-panoramic.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -851,16 +858,64 @@ const Bookings = () => {
       rating: 4.7,
       category: "Luxury Car Rental"
     },
+    // Helicopter Rides - VIP Fleet
     {
-      id: "6",
-      title: "Helicopter City Tour",
-      description: "Private helicopter with champagne service",
-      image: "helicopter",
-      price: "$3,800",
-      duration: "2 hours",
-      location: "Dubai Helipad",
+      id: "helicopter-h155-vip",
+      title: "Airbus H155 VIP Experience",
+      description: "Ultra-luxury helicopter with panoramic windows, leather interiors & champagne service",
+      image: helicopterH155Vip,
+      price: "$8,500",
+      duration: "3 hours",
+      location: "Dubai Skyline & Coastline",
       rating: 5.0,
       isExclusive: true,
+      category: "Helicopter Rides"
+    },
+    {
+      id: "helicopter-aw139-vip",
+      title: "Leonardo AW139 Presidential",
+      description: "Executive helicopter with VIP cabin configuration & private landing zones",
+      image: helicopterAw139Vip,
+      price: "$12,000",
+      duration: "4 hours",
+      location: "Palm Jumeirah & Emirates",
+      rating: 4.9,
+      isExclusive: true,
+      category: "Helicopter Rides"
+    },
+    {
+      id: "helicopter-s76d-luxury",
+      title: "Sikorsky S-76D Luxury Charter",
+      description: "Premium helicopter with executive seating & helicopter butler service",
+      image: helicopterS76dLuxury,
+      price: "$15,000",
+      duration: "5 hours",
+      location: "Dubai Marina & Desert",
+      rating: 5.0,
+      isExclusive: true,
+      category: "Helicopter Rides"
+    },
+    {
+      id: "helicopter-bell-429",
+      title: "Bell 429 VIP Transport",
+      description: "Modern helicopter with panoramic cabin & luxury amenities for city tours",
+      image: helicopterBell429,
+      price: "$6,200",
+      duration: "2 hours",
+      location: "Burj Khalifa & Downtown",
+      rating: 4.8,
+      isHotDeal: true,
+      category: "Helicopter Rides"
+    },
+    {
+      id: "helicopter-ec135-panoramic",
+      title: "Eurocopter EC135 Scenic",
+      description: "Glass-cabin helicopter with 360° views & professional aerial photography",
+      image: helicopterEc135Panoramic,
+      price: "$4,800",
+      duration: "90 minutes",
+      location: "Burj Al Arab & Coast",
+      rating: 4.7,
       category: "Helicopter Rides"
     }
   ];
