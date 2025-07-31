@@ -111,8 +111,12 @@ const VIP = () => {
             </div>
           </div>
 
-          {/* Premium Dubai Clubs & Lounges */}
+          {/* Premium Dubai Lounges & Restaurants */}
           <Card className="mb-12 overflow-hidden">
+            <div className="bg-gradient-to-r from-gold/10 to-gold/5 p-6 border-b border-gold/20">
+              <h2 className="text-2xl font-bold text-center">Premium Lounges & Fine Dining</h2>
+              <p className="text-center text-muted-foreground mt-2">Sophisticated dining experiences with stunning views</p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
                 <div className="aspect-video overflow-hidden">
@@ -207,6 +211,16 @@ const VIP = () => {
                 </div>
               </Card>
 
+            </div>
+          </Card>
+
+          {/* Premium Dubai Nightclubs */}
+          <Card className="mb-12 overflow-hidden">
+            <div className="bg-gradient-to-r from-gold/10 to-gold/5 p-6 border-b border-gold/20">
+              <h2 className="text-2xl font-bold text-center">Exclusive Dubai Nightclubs</h2>
+              <p className="text-center text-muted-foreground mt-2">Experience Dubai's premier nightlife destinations</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
                 <div className="aspect-video overflow-hidden">
                   <img 
@@ -230,37 +244,6 @@ const VIP = () => {
                     <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">EDM Club</span>
                     <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Rooftop Terrace</span>
                     <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">International DJs</span>
-                  </div>
-                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                    <Phone className="w-3 h-3 mr-1" />
-                    Reserve
-                  </Button>
-                </div>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={venueGoldOn27} 
-                    alt="Gold on 27"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Gold on 27</h3>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      Burj Al Arab Jumeirah
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    <span className="text-gold font-medium">Hidden speakeasy</span> at <span className="text-gold">Burj Al Arab</span>
-                  </p>
-                  <div className="mb-4">
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Speakeasy</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Craft Cocktails</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Ultra Exclusive</span>
                   </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
@@ -354,99 +337,6 @@ const VIP = () => {
                     <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Circus Theme</span>
                     <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Live Performances</span>
                     <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Theatrical</span>
-                  </div>
-                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                    <Phone className="w-3 h-3 mr-1" />
-                    Reserve
-                  </Button>
-                </div>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={venueSanBeach} 
-                    alt="SĀN Beach"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">SĀN Beach</h3>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      Atlantis The Palm
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    <span className="text-gold font-medium">Beachfront luxury club</span> and <span className="text-gold">restaurant</span>
-                  </p>
-                  <div className="mb-4">
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Beach Club</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Mediterranean</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Ocean Views</span>
-                  </div>
-                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                    <Phone className="w-3 h-3 mr-1" />
-                    Reserve
-                  </Button>
-                </div>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={venueUrla} 
-                    alt="Urla Dubai"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Urla</h3>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      DIFC
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    <span className="text-gold font-medium">Mediterranean fine dining</span> with <span className="text-gold">stunning Burj Khalifa views</span>
-                  </p>
-                  <div className="mb-4">
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Mediterranean</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Fine Dining</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Burj Views</span>
-                  </div>
-                  <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
-                    <Phone className="w-3 h-3 mr-1" />
-                    Reserve
-                  </Button>
-                </div>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={venueBarDesPres} 
-                    alt="Bar des Pres Dubai"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-semibold group-hover:text-gold transition-colors">Bar des Prés</h3>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      DIFC
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    <span className="text-gold font-medium">French-Japanese fusion</span> with <span className="text-gold">elegant gastronomic journey</span>
-                  </p>
-                  <div className="mb-4">
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">French-Japanese</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full mr-2">Fusion Cuisine</span>
-                    <span className="inline-block bg-gold/10 text-gold text-xs px-2 py-1 rounded-full">Burj Views</span>
                   </div>
                   <Button variant="gold" size="sm" onClick={() => window.open("https://w.app/Dubaialacarte", "_blank")}>
                     <Phone className="w-3 h-3 mr-1" />
