@@ -73,6 +73,12 @@ import helicopterAw139Vip from "@/assets/helicopter-aw139-vip.jpg";
 import helicopterS76dLuxury from "@/assets/helicopter-s76d-luxury.jpg";
 import helicopterEc135Panoramic from "@/assets/helicopter-ec135-panoramic.jpg";
 
+// Import adrenaline & sky adventure images
+import skydivingPalmJumeirah from "@/assets/skydiving-palm-jumeirah.jpg";
+import skydivingDesertDrop from "@/assets/skydiving-desert-drop.jpg";
+import ziplineDubaiMarina from "@/assets/zipline-dubai-marina.jpg";
+import skyViewsObservatory from "@/assets/sky-views-observatory.jpg";
+
 // Lazy load heavy components for better performance
 const BookingsList = lazy(() => import("../components/BookingsList").catch(() => ({ default: () => <div>Failed to load bookings</div> })));
 
@@ -923,7 +929,7 @@ const Bookings = () => {
       id: "skydiving-palm-jumeirah",
       title: "Palm Jumeirah Tandem Jump",
       description: "Professional instructor, full gear, HD video & photos included",
-      image: helicopterH155Vip, // Placeholder image
+      image: skydivingPalmJumeirah,
       price: "AED 2,499",
       duration: "4 hours",
       location: "Palm Jumeirah Drop Zone",
@@ -935,7 +941,7 @@ const Bookings = () => {
       id: "skydiving-desert",
       title: "Desert Drop Zone Skydiving",
       description: "Desert tandem skydiving with professional instructor & full equipment",
-      image: helicopterBell429, // Placeholder image
+      image: skydivingDesertDrop,
       price: "AED 2,099",
       duration: "3 hours",
       location: "Desert Drop Zone",
@@ -947,7 +953,7 @@ const Bookings = () => {
       id: "xline-zipline",
       title: "Dubai Marina XLine Zipline",
       description: "High-speed zipline up to 80 km/h with GoPro footage included",
-      image: helicopterEc135Panoramic, // Placeholder image
+      image: ziplineDubaiMarina,
       price: "AED 699",
       duration: "2 hours",
       location: "Dubai Marina",
@@ -958,7 +964,7 @@ const Bookings = () => {
       id: "sky-views-observatory",
       title: "Sky Views Edge Walk & Glass Slide",
       description: "Walk on sky bridge at 219 meters above ground with glass slide experience",
-      image: helicopterAw139Vip, // Placeholder image
+      image: skyViewsObservatory,
       price: "AED 70",
       duration: "1.5 hours",
       location: "Downtown Dubai",
