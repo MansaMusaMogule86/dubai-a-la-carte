@@ -113,10 +113,6 @@ const VIP = () => {
 
           {/* Premium Dubai Clubs & Lounges */}
           <Card className="mb-12 overflow-hidden">
-            <div className="bg-gradient-to-r from-gold/10 to-gold/5 p-6 border-b border-gold/20">
-              <h2 className="text-2xl font-bold text-center">Dubai's Most Exclusive Clubs & Lounges</h2>
-              <p className="text-center text-muted-foreground mt-2">Experience the pinnacle of luxury nightlife in Dubai</p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
               <Card className="overflow-hidden hover:shadow-card transition-all duration-300 group">
                 <div className="aspect-video overflow-hidden">
