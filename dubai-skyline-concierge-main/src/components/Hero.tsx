@@ -19,38 +19,28 @@ export const Hero = () => {
           {/* Premium Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white mb-8">
             <Star className="w-4 h-4 text-gold" />
-            <span className="text-sm font-medium">Exclusive Dubai Concierge</span>
+            <span className="text-sm font-medium">Dubai à la Carte</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Your life in Dubai—
+            Dubai à la Carte
             <br />
-            <span className="text-gold">done for you.</span>
+            <span className="text-gold">VIP Concierge</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            From VIP relocations to luxury experiences, we handle every detail 
-            so you can focus on what matters most.
+            Jets, yachts, villas, reservations—one WhatsApp and it’s handled.
+            <br />
+            <strong>500+ requests fulfilled last year for CEOs, founders, royalty.</strong>
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              variant="premium" 
-              size="xl" 
-              className="group"
-            >
-              Get Started Today
+          {/* Single CTA */}
+          <div className="flex justify-center">
+            <Button variant="premium" size="xl" className="group">
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            
-            <Button 
-              variant="elegant" 
-              size="xl"
-            >
-              Watch Demo
             </Button>
           </div>
 
@@ -62,11 +52,11 @@ export const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-white">24/7</div>
-              <div className="text-white/70 text-sm">Concierge Support</div>
+              <div className="text-white/70 text-sm">Dedicated Manager</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-white/70 text-sm">Satisfaction</div>
+              <div className="text-white/70 text-sm">Transparent Fees</div>
             </div>
           </div>
         </div>
