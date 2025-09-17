@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dubai A La Carte - Luxury Concierge Design System
+   Colors: Deep blacks, pure whites, rich golds
+   Aesthetic: Apple x Emirates x Aman Resorts x Dubai skyline
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Ultra premium palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3%;
+
+    /* Card system - Clean and elegant */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3%;
+
+    /* Popover system */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3%;
+
+    /* Primary - Deep luxury black */
+    --primary: 0 0% 3%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Sophisticated gray */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    /* Muted - Subtle backgrounds */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent - Premium gold */
+    --accent: 43 74% 66%;
+    --accent-foreground: 0 0% 9%;
+
+    /* Luxury gold variants */
+    --gold: 43 74% 66%;
+    --gold-dark: 43 74% 56%;
+    --gold-light: 43 74% 76%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border and input */
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 0 0% 3%;
+
+    --radius: 0.75rem;
+
+    /* Luxury gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(43 74% 66%) 0%, hsl(43 74% 56%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3%) 0%, hsl(0 0% 15%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-luxury: 0 20px 40px -12px hsl(0 0% 0% / 0.25);
+    --shadow-gold: 0 8px 32px hsl(43 74% 66% / 0.15);
+    --shadow-card: 0 4px 16px hsl(0 0% 0% / 0.08);
+
+    /* Transitions */
+    --transition-luxury: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Sophisticated black with gold accents */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 43 74% 66%;
+    --accent-foreground: 0 0% 4%;
+
+    --gold: 43 74% 66%;
+    --gold-dark: 43 74% 56%;
+    --gold-light: 43 74% 76%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 43 74% 66%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
