@@ -3,21 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dubai-skyline-concierge</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Dubai à la Carte | VIP Concierge Services</title>
+    <meta name="description" content="VIP relocations, luxury experiences, restaurant charters, yachts—one WhatsApp and it’s handled. 500+ requests fulfilled last year for CEOs, founders, royalty." />
+    <meta name="author" content="Dubai à la Carte" />
+    <meta name="robots" content="index,follow,noarchive" />
 
-    <meta property="og:title" content="dubai-skyline-concierge" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- OpenGraph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://dubaialacarte.com" />
+    <meta property="og:title" content="Dubai à la Carte | VIP Concierge Services" />
+    <meta property="og:description" content="Ultra-luxury concierge in Dubai. Jets, yachts, villas, reservations—one message and it’s done." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:image:alt" content="Dubai aerial view" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:url" content="https://dubaialacarte.com" />
+    <meta name="twitter:title" content="Dubai à la Carte" />
+    <meta name="twitter:description" content="Ultra-luxury concierge in Dubai. One message, everything handled." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80" />
+
+    <!-- Pre-connects & font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "Service"],
+      "name": "Dubai à la Carte",
+      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=80",
+      "telephone": "+971-4-123-4567",
+      "email": "hello@dubaialacarte.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      },
+      "url": "https://dubaialacarte.com",
+      "description": "Luxury concierge services in Dubai: VIP travel, real-estate, yacht & jet charter, reservations.",
+      "areaServed": { "@type": "City", "name": "Dubai" }
+    }
+    </script>
   </head>
 
-  <body>
+  <body style="margin:0; font-family:Inter,sans-serif; background:#0b0f19; color:#f2f2f2;">
+    <!-- HERO SECTION -->
+    <section style="position:relative; height:100vh; min-height:600px; display:flex; align-items:center; justify-content:center; text-align:center;">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80"
+           alt="Dubai aerial view"
+           style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1; opacity:0.35;" />
+      <div>
+        <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight:800; margin:0 0 1rem;">Dubai à la Carte</h1>
+        <p style="max-width:600px; margin:0 auto 2rem; font-size:1.125rem; line-height:1.6;">
+          VIP relocations, luxury experiences, restaurant charters, yachts—one WhatsApp and it’s handled.<br>
+          <strong>500+ requests fulfilled last year for CEOs, founders, royalty.</strong>
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <a href="#contact" style="background:#d4af37; color:#000; padding:.9rem 2rem; border-radius:4px; font-weight:600; text-decoration:none;">Get Started</a>
+          <a href="#demo" style="border:1px solid #d4af37; color:#d4af37; padding:.9rem 2rem; border-radius:4px; font-weight:600; text-decoration:none;">60-Second Demo</a>
+        </div>
+        <ul style="list-style:none; display:flex; justify-content:center; gap:2rem; margin-top:3rem; padding:0; font-size:.875rem; opacity:.8;">
+          <li>Licensed by Dubai DTCM</li>
+          <li>24/7 Dedicated Manager</li>
+          <li>Transparent Flat Fees</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- React app injection -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
