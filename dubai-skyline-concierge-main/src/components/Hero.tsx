@@ -31,9 +31,7 @@ export const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Jets, yachts, villas, reservations—one WhatsApp and it’s handled.
-            <br />
-            <strong>500+ requests fulfilled last year for CEOs, founders, royalty.</strong>
+            From VIP relocations to luxury experiences, we handle every detail so you can focus on what matters most.
           </p>
 
           {/* Single CTA */}
