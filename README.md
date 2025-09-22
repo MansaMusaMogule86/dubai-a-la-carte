@@ -2,15 +2,14 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/4c7237ed-0178-43dc-bbde-1e8ef8eae2d9
-
+**URL**: https://www.dubaialacarte.com
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4c7237ed-0178-43dc-bbde-1e8ef8eae2d9) and start prompting.
+Simply visit the  https://www.dubaialacarte.com and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -62,7 +61,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/4c7237ed-0178-43dc-bbde-1e8ef8eae2d9) and click on Share -> Publish.
+Simply open https://www.dubaialacarte.com and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
